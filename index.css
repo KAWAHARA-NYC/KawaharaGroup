@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0px;
+  background-color: #0f1626;
+  color: #ab987a;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
+}
+.wrapper {
+  flex: 1;
+}
+.maingadget {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 2px;
+}
+.imagelinkgadget {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 2px;
+}
+.mainImageWrapper {
+  width: 100%;
+  margin: 0%;
+  position: relative;
+}
+.mainImageWrapper img {
+  width: 100%;
+  height:auto;
+}
+.mainImageWrapper p{
+  width: 100%;
+  text-align: right;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 90%;
+  left: 90%;
+  -ms-transform: translate(-90%,-90%);
+  -webkit-transform: translate(-90%,-90%);
+  transform: translate(-90%,-90%);
+  font-size: 30px;
+  margin: 0;
+  padding: 0%;
+  padding-right: 10%;
+}
+.imgImageWrapper {
+  width: 100%;
+  margin: 0%;
+}
+.imgImageWrapper img {
+  width: 100%;
+  height:auto;
+}
+.imgImageWrapper p{
+  width: 100%;
+  text-align: right;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 90%;
+  left: 90%;
+  -ms-transform: translate(-90%,-90%);
+  -webkit-transform: translate(-90%,-90%);
+  transform: translate(-90%,-90%);
+  font-size: 30px;
+  margin: 0;
+  padding: 0%;
+  padding-right: 10%;
+}
+
+footer {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgb(41, 38, 58)
+}
+.foot li {
+  padding: 5px;
+}
+a {
+  color: #ab987a;
+}
+a:hover {
+  color: #ab987a;
+}
+a:active {
+  color: #ab987a;
+}
+
+@media (max-width:768px) {
+  .imagelinkgadget {
+    flex-direction: column;
+  }
+  .maingadget {
+    width:100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .mainImageWrapper {
+    width:100%;
+    margin-bottom: 20px;
+    margin:0 auto;
+  }  
+  .imgImageWrapper {
+    width:90%;
+    margin-bottom: 20px;
+    margin:0 auto;
+  }
+  .imgImageWrapper img {
+    width:100%;
+    height:auto;
+  }
+}
