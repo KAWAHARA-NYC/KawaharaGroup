@@ -7,30 +7,72 @@
     <link rel="stylesheet" type="text/css" href="destyle.css" style="visibility: visible;">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" style="visibility: visible;">
     <link rel="stylesheet" type="text/css" href="index.css" style="visibility: visible;">
-    <title>カワハラ株式会社</title>
+
+    <script type="text/javascript">
+        myImage = new Array(
+        // 画像ファイル名の設定
+        "6Q7A3708.JPG",
+        "6Q7A3663.JPG",
+        "6Q7A3638.JPG"
+        );
+        myNowCnt = -1;
+        // 現在表示している配列番号
+        myflg = 0;
+        // どっちを表示して、どっちを消すかのフラグ
+        function myChange(){
+        // スライドショーメイン関数
+        myNowCnt = (myNowCnt<myImage.length-1) ? myNowCnt+1 : 0;
+        // 次の配列番号
+        myflg = (myflg==0) ? 1 : 0;
+        // 表示・非表示フラグ反転
+        if (myflg == 0){
+        document.getElementById("idshow1").src = myImage[myNowCnt];
+        // 次の画像をセットする
+        document.getElementById("idshow1").className = "fadein";
+        // フェードイン
+        document.getElementById("idshow2").className = "fadeout";
+        // フェードアウト
+        }else{
+        document.getElementById("idshow2").src = myImage[myNowCnt];
+        // 次の画像をセットする
+        document.getElementById("idshow1").className = "fadeout";
+        // フェードアウト
+        document.getElementById("idshow2").className = "fadein";
+        // フェードイン
+        }
+        setTimeout( "myChange()" , 4000 ); // 4秒周期に画像を更新する
+        }
+    </script>
+
+    
+    <title>シャンデリアTOKYO</title>
 </head>
 
 <body>
     <header>
-        <p>お問い合わせ・電話のリンク（サイトの上部にずっとある感じ）
+        <p>シャンデリアTOKYO</p>
     </header>
     <div class="wrapper">
         <div class="maingadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="mainImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier1.jpg" title="" alt="" src="Chandelier1.jpg">
-                <p>The Most Expensive Shine</p>
+            <div class="mainImageWrapper"　id="photo">
+                <img id="idshow1" class="lazyloaded fadeout" style="position:absolute;" data-src="6Q7A3708.JPG" title="" alt="" src="6Q7A3708.JPG">
+                <img id="idshow2" class="lazyloaded fadein" data-src="6Q7A3663.JPG" title="" alt="" src="6Q7A3663.JPG">
+                <script type="text/javascript">
+                    myChange();
+                </script>
+                <p>贅沢な大人の空間に</p>
             </div>
         </div>
         <div class="imagelinkgadget medium col-md-6 col-sm-6 col-xs-12 website nolink">
             <div class="imgImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier2.jpg" title="" alt="" src="Chandelier2.jpg">
-                <p>introduction</p>
+                <img class="lazyloaded" data-src="6Q7A3663.JPG" title="" alt="" src="6Q7A3663.JPG">
+                <p>What Chandelier Is...</p>
             </div>
         </div>
         <div class="imagelinkgadget medium col-md-6 col-sm-6 col-xs-12 website nolink">
-            <div class="imgImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier3.jpg" title="" alt="" src="Chandelier3.jpg">
-                <p>History</p>
+            <div class="imgImageWrapper grayscale">
+                <img class="lazyloaded" data-src="6Q7A3638.JPG" title="" alt="" src="6Q7A3638.JPG">
+                <p>History Since 50 years</p>
             </div>
         </div>
     </div>
@@ -41,6 +83,9 @@
             <li><a href="xxx.html">instagram</a></li>
         </ul>
     </footer>
+
+
+
 </body>
 
 </html>

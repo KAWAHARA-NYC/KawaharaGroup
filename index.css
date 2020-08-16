@@ -1,12 +1,47 @@
 body {
   margin: 0;
   padding: 0px;
-  background-color: #0f1626;
+  background-color: rgba(255, 255, 255, 0.979);
   color: #ab987a;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
   font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
+}
+
+.fadeout{
+  opacity: 0;
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+  }
+  .fadein{
+  opacity: 1;
+  transition: 3s ease-in-out;
+  -webkit-transition: 3s ease-in-out;
+  }
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color : white; 
+  opacity: 0.8;
+  z-index: 99;
+  font-size: 30px;
+  margin-top: 4px;
+}
+header p{
+  width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  height: 30px;
+  color: black;
+  font-weight: bold;
+
+  /*位置の設定 - 上下中央寄せ*/
+  position: absolute;
+  margin: auto;
+  padding: 5px;
+  top: 0;
+  bottom: 0;
 }
 .wrapper {
   flex: 1;
@@ -16,14 +51,14 @@ body {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 40px;
-  padding: 2px;
+  padding: 0px;
 }
 .imagelinkgadget {
   display:flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 40px;
-  padding: 2px;
+  padding: 0px;
 }
 .mainImageWrapper {
   width: 100%;
@@ -38,13 +73,14 @@ body {
   width: 100%;
   text-align: right;
   position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
+  color: Black;/*文字は白に*/
+  text-shadow:0 0 10px white;
   top: 90%;
   left: 90%;
   -ms-transform: translate(-90%,-90%);
   -webkit-transform: translate(-90%,-90%);
   transform: translate(-90%,-90%);
-  font-size: 30px;
+  font-size: 50px;
   margin: 0;
   padding: 0%;
   padding-right: 10%;
@@ -61,16 +97,21 @@ body {
   width: 100%;
   text-align: right;
   position: absolute;/*絶対配置*/
-  color: white;/*文字は白に*/
+  color: black;/*文字は白に*/
+  text-shadow:0 0 10px white;
   top: 90%;
   left: 90%;
   -ms-transform: translate(-90%,-90%);
   -webkit-transform: translate(-90%,-90%);
   transform: translate(-90%,-90%);
-  font-size: 30px;
+  font-size: 50px;
   margin: 0;
   padding: 0%;
   padding-right: 10%;
+}
+
+.grayscale img{
+  filter: grayscale(100%);
 }
 
 footer {
