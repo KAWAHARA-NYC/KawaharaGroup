@@ -49,13 +49,19 @@ header p{
 
 .wrapper {
   flex: 1;
+  padding-top: 100px;
 }
 
 .maingadget {
-  width: 100%;
-  padding:100px 70px 30px 70px;
+  padding:0px 150px 30px;
+  padding-bottom: 30px;
   text-align:left;
   font-size: 22px;
+}
+
+.maingadget p {
+  width: 80%;
+  margin:0 auto;
 }
 
 .imagelinkgadget {
@@ -64,13 +70,21 @@ header p{
   text-align:center;
   margin: 0 auto;
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 40px;
+}
+
+.left {
+  padding-right:0px;
+}
+.right {
+  padding-left:0px;
 }
 
 .imgImageWrapper img {
   width: 100%;
   height:auto;
   margin: 0 auto;
+  padding: 30px;
   padding-bottom: 10px;
 }
 

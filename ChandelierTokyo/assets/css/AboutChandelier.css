@@ -48,6 +48,7 @@ header p{
 
 .wrapper {
   flex: 1;
+  padding-top: 100px;
 }
 
 .imagelinkgadget {
