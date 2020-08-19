@@ -100,7 +100,12 @@ header p{
 }
 .imgImageWrapper {
   width: 100%;
-  margin: 5%;
+  margin: 5%; 
+}
+.imgonlywrapper {
+  width: 100%;
+  padding-bottom:7px;
+  padding-right:7px;
   overflow:hidden; 
 }
 
@@ -108,6 +113,8 @@ header p{
   width: 100%;
   height:auto;
   transition:1.1s all;
+  box-shadow: 3px 8px 10px 0 rgba(0, 0, 0, 0.3),
+              8px 3px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .imgImageWrapper a:hover img {
@@ -121,12 +128,10 @@ header p{
   width: 100%;
   text-align: right;
   color: black;/*文字は白に*/
-  position: absolute;
   text-shadow:0 0 10px white;
   font-size: 24px;
   margin: 0;
   padding: 0%;
-  padding-right: 10%;
 }
 
 /*
