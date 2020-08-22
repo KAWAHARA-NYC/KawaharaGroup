@@ -12,11 +12,10 @@ body {
 header {
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color : white; 
   opacity: 0.8;
   z-index: 99;
-  font-size: 30px;
   margin-top: 4px;
   margin-bottom: 4px;
   padding-left: 10px;
@@ -29,19 +28,38 @@ header nav ul li{
   height: 50px;
   display:inline-block;
   font-size: 22px;
-  margin: 20px 15px 15px 15px;
+  margin: 25px 15px 15px 15px;
 }
 
-header p{
+.englishname p{
   width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 30px;
   color: black;
+  font-size:40px;
   font-weight: bold;
-
+  font-family: 'Dancing Script', cursive;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  margin: auto;
-  padding: 5px;
+  margin:0;
+  margin-left: 30px;
+  padding: 0px;
+  top: 0;
+  bottom: 0;
+}
+
+.japanesename p{
+  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  height: 30px;
+  font-size:20px;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 10px;
+  /*位置の設定 - 上下中央寄せ*/
+  position: absolute;
+  margin:0;
+  margin-top: 43px;
+  margin-left: 60px;
+  padding: 0px;
   top: 0;
   bottom: 0;
 }
