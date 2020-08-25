@@ -6,47 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/destyle.css" style="visibility: visible;">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" style="visibility: visible;">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" style="visibility: visible;">
 
     <script type="text/javascript">
         myImage = new Array(
-        // 画像ファイル名の設定
-        "assets/img/top/6Q7A3708.JPG",
-        "assets/img/top/6Q7A3663.JPG",
-        "assets/img/top/6Q7A3638.JPG"
+            // 画像ファイル名の設定
+            "assets/img/top/6Q7A3708.JPG",
+            "assets/img/top/6Q7A3663.JPG",
+            "assets/img/top/6Q7A3638.JPG"
         );
         myNowCnt = -1;
         // 現在表示している配列番号
         myflg = 0;
         // どっちを表示して、どっちを消すかのフラグ
-        function myChange(){
-        // スライドショーメイン関数
-        myNowCnt = (myNowCnt<myImage.length-1) ? myNowCnt+1 : 0;
-        // 次の配列番号
-        myflg = (myflg==0) ? 1 : 0;
-        // 表示・非表示フラグ反転
-        if (myflg == 0){
-        document.getElementById("idshow1").src = myImage[myNowCnt];
-        // 次の画像をセットする
-        document.getElementById("idshow1").className = "fadein";
-        // フェードイン
-        document.getElementById("idshow2").className = "fadeout";
-        // フェードアウト
-        }else{
-        document.getElementById("idshow2").src = myImage[myNowCnt];
-        // 次の画像をセットする
-        document.getElementById("idshow1").className = "fadeout";
-        // フェードアウト
-        document.getElementById("idshow2").className = "fadein";
-        // フェードイン
+        function myChange() {
+            // スライドショーメイン関数
+            myNowCnt = (myNowCnt < myImage.length - 1) ? myNowCnt + 1 : 0;
+            // 次の配列番号
+            myflg = (myflg == 0) ? 1 : 0;
+            // 表示・非表示フラグ反転
+            if (myflg == 0) {
+                document.getElementById("idshow1").src = myImage[myNowCnt];
+                // 次の画像をセットする
+                document.getElementById("idshow1").className = "fadein";
+                // フェードイン
+                document.getElementById("idshow2").className = "fadeout";
+                // フェードアウト
+            } else {
+                document.getElementById("idshow2").src = myImage[myNowCnt];
+                // 次の画像をセットする
+                document.getElementById("idshow1").className = "fadeout";
+                // フェードアウト
+                document.getElementById("idshow2").className = "fadein";
+                // フェードイン
+            }
+            setTimeout("myChange()", 4000); // 4秒周期に画像を更新する
         }
-        setTimeout( "myChange()" , 4000 ); // 4秒周期に画像を更新する
-        }
+
+        $(function () {
+            function animation() {
+                $('.fadeInUp').each(function () {
+                    //ターゲットの位置を取得
+                    var target = $(this).offset().top;
+                    //スクロール量を取得
+                    var scroll = $(window).scrollTop();
+                    //ウィンドウの高さを取得
+                    var windowHeight = $(window).height();
+                    //ターゲットまでスクロールするとフェードインする
+                    if (scroll > target - windowHeight + 500) {
+                        $(this).css('opacity', '1');
+                        $(this).css('transform', 'translateY(0)');
+                    }
+                });
+            }
+            animation();
+            $(window).scroll(function () {
+                animation();
+            });
+        });
     </script>
 
-    
+
     <title>シャンデリアTOKYO</title>
 </head>
 
@@ -58,43 +82,72 @@
         <div class="japanesename">
             <p>シャンデリア東京</p>
         </div>
-        <nav id="global-navi">
-            <ul class="menu">
-                <li><a href=""><i class="fas fa-envelope"></i></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="AboutChandelier.html">About Chandelier</a></li>
-                <li><a href="AboutHistory.html">About Us</a></li>
-            </ul>
-        </nav>
+        <div class="contactbtn">
+            <a href=""><i class="fas fa-envelope"></i></a>
+        </div>
     </header>
     <div class="wrapper">
         <div class="maingadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="mainImageWrapper"　id="photo">
-                <img id="idshow1" class="lazyloaded fadeout" style="position:absolute;" data-src="6Q7A3708.JPG" title="" alt="" src="assets/img/top/testpicture.png">
-                <img id="idshow2" class="lazyloaded fadein" data-src="6Q7A3663.JPG" title="" alt="" src="assets/img/top/testpicture.png">
+            <div class="mainImageWrapper" 　id="photo">
+                <img id="idshow1" class="lazyloaded fadeout" style="position:absolute;" data-src="6Q7A3708.JPG" title=""
+                    alt="" src="assets/img/top/test.png">
+                <img id="idshow2" class="lazyloaded fadein" data-src="6Q7A3663.JPG" title="" alt=""
+                    src="assets/img/top/test.png">
                 <!--<script type="text/javascript">
                     myChange();
                 </script>
                 -->
+                <div class="global-navi">
+                    <ul class="menu">
+                        <li><a href="index.html">
+                                <p>Home<br>Home</p>
+                            </a></li>
+                        <li><a href="AboutHistory.html">
+                                <p>シャンデリア東京<br>About Us</p>
+                            </a></li>
+                        <li><a href="AboutChandelier.html">
+                                <p>作品について<br>Chandelier</p>
+                            </a></li>
+                        <li><a href="company.html">
+                                <p>事業内容<br>Company</p>
+                            </a></li>
+                        <li><a href="">
+                                <p>お問い合わせ<br>Contact</p>
+                            </a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="imagelinkgadget medium col-md-6 col-sm-6 col-xs-12 website nolink">
-            <div class="imgImageWrapper">
+        <div class="intro medium col-md-12 col-sm-12 col-xs-12 website nolink">
+            <div class="introwrapper fadeInUp">
+                <div class="Title">
+                    <h4>シャンデリア東京とは</h4>
+                </div>
+                <div class="Description">
+                    <p>シャンデリア東京は今までに高級ホテル、テーマパーク、ダンススタジオ、個人宅など、幅広い施設に１からデザインしたシャンデリアや照明器具の提供をしてきました。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
+            <div class="fadeInUp imgImageWrapper">
                 <a href="introduction.html">
                     <p>About Chandelier</p>
                     <div class="imgonlywrapper">
-                        <img class="lazyloaded" data-src="6Q7A3663.JPG" title="" alt="" src="assets/img/top/6Q7A3663.JPG">
+                        <img class="lazyloaded" data-src="6Q7A3663.JPG" title="" alt=""
+                            src="assets/img/top/6Q7A3663.JPG">
                     </div>
-                    
+
                 </a>
             </div>
         </div>
-        <div class="imagelinkgadget medium col-md-6 col-sm-6 col-xs-12 website nolink">
-            <div class="imgImageWrapper grayscale">
+        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
+            <div class="imgImageWrapper grayscale fadeInUp">
                 <a href="AboutHistory.html">
                     <p>About Us</p>
                     <div class="imgonlywrapper">
-                        <img class="lazyloaded" data-src="6Q7A3638.JPG" title="" alt="" src="assets/img/top/6Q7A3638.JPG">
+                        <img class="lazyloaded" data-src="6Q7A3638.JPG" title="" alt=""
+                            src="assets/img/top/6Q7A3638.JPG">
                     </div>
                 </a>
             </div>

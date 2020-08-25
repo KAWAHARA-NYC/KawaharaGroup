@@ -2,11 +2,11 @@ body {
   margin: 0;
   padding: 0px;
   background-color: rgba(255, 255, 255, 0.979);
-  color: #ab987a;
+  color: #242424;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
+  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
 }
 
 .fadeout {
@@ -20,26 +20,23 @@ body {
   -webkit-transition: 3s ease-in-out;
 }
 
+.fadeInUp {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+
+
 header {
   position: fixed;
   width: 100%;
   height: 70px;
-  background-color : white; 
-  opacity: 0.8;
+  background-color: transparent ; 
   z-index: 99;
-  margin-top: 4px;
+  margin-top: 0px;
   margin-bottom: 4px;
   padding-left: 10px;
-}
-  
-#global-navi {
-  float:right;
-}
-header nav ul li{
-  height: 50px;
-  display:inline-block;
-  font-size: 22px;
-  margin: 25px 15px 15px 15px;
+  text-shadow:0 0 10px white;
 }
 
 .englishname p{
@@ -49,13 +46,14 @@ header nav ul li{
   font-size:40px;
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
+  text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  margin:0;
-  margin-left: 30px;
-  padding: 0px;
-  top: 0;
-  bottom: 0;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .japanesename p{
@@ -65,33 +63,110 @@ header nav ul li{
   color: black;
   font-weight: bold;
   letter-spacing: 10px;
+  text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  margin:0;
-  margin-top: 43px;
-  margin-left: 60px;
-  padding: 0px;
-  top: 0;
-  bottom: 0;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
+
+.contactbtn i{
+  font-size:46px;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+
+.global-navi {
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+  position: absolute;
+  bottom: 0px;
+}
+.global-navi ul{
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+  font-size:0;
+}
+.global-navi ul li{
+  height: auto;
+  display:inline-block;
+  background-color: #1d1d1d;
+  opacity: 0.8;
+  text-align:center;
+  width:20%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.global-navi ul li:hover {
+  background-color: white;
+  color: #1d1d1d;
+}
+
+.global-navi ul li p:hover {
+  color: #1d1d1d;
+}
+
+.global-navi ul li p{
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+.global-navi a {
+  color: black;
+}
+.global-navi a:hover {
+  color: black
+}
+.global-navi a:active {
+  color: black;
+}
+
+
+
 .wrapper {
   flex: 1;
-  padding-top:70px;
 }
 .maingadget {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 5%;
   padding: 0px;
 }
-.imagelinkgadget {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 40px;
-  padding: 0px;
+
+.intro {
+  margin-bottom: 5%;
 }
+
+.introwrapper {
+  width:570px;
+  margin: 0 auto;
+  text-align:left;
+  font-size: 16px;
+}
+
+.Title {
+ text-align:center;
+ margin: 0 auto;
+ padding-bottom: 20px;
+ font-size: 24px;
+}
+
+.Description {
+  width: 80%;
+  margin:0 auto;
+}
+
 .mainImageWrapper {
   width: 100%;
   margin: 0%;
@@ -101,11 +176,12 @@ header nav ul li{
   width: 100%;
   height:auto;
 }
+/*
 .mainImageWrapper p{
   width: 100%;
   text-align: right;
-  position: absolute;/*絶対配置*/
-  color: Black;/*文字は白に*/
+  position: absolute;
+  color: Black;
   text-shadow:0 0 10px white;
   top: 90%;
   left: 90%;
@@ -117,9 +193,19 @@ header nav ul li{
   padding: 0%;
   padding-right: 10%;
 }
+*/
+
+.imagelinkgadget {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px;
+}
+
 .imgImageWrapper {
-  width: 100%;
-  margin: 5%; 
+  width: 50%;
+  margin: 0 5%; 
+  margin-bottom: 5%;
 }
 .imgonlywrapper {
   width: 100%;
@@ -183,19 +269,20 @@ footer {
   font-size: 15px;
   text-align: center;
   padding: 20px 0;
-  background-color: rgb(41, 38, 58)
+  background-color: black;
+  color: white;
 }
 .foot li {
   padding: 5px;
 }
-a {
-  color: #ab987a;
+.foot a {
+  color: white;
 }
-a:hover {
-  color: #ab987a;
+.foot a:hover {
+  color: white
 }
-a:active {
-  color: #ab987a;
+.foot a:active {
+  color: white;
 }
 
 @media (max-width:768px) {
