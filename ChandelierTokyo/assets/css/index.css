@@ -1,3 +1,9 @@
+/* slickの使用のため */
+*  {
+  min-height: 0;
+  min-width : 0;
+}
+
 body {
   margin: 0;
   padding: 0px;
@@ -9,23 +15,34 @@ body {
   font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
 }
 
-.fadeout {
-  opacity: 0;
-  transition: 3s ease-in-out;
-  -webkit-transition: 3s ease-in-out;
-  }
-.fadein {
-  opacity: 1;
-  transition: 3s ease-in-out;
-  -webkit-transition: 3s ease-in-out;
-}
-
 .fadeInUp {
   opacity : 0;
   transform: translateY(20px);
   transition: 1s;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-dots {
+  bottom: 100px;
+}
+
+.slick-dots li button:before {
+  text-shadow:0 0 10px white;
+}
+
+.slick-prev,.slick-next {
+    z-index: 100;
+}
+
+.slick-prev {
+    left: 30px;
+}
+.slick-next {
+    right: 30px;
+}
 
 header {
   position: fixed;
@@ -40,8 +57,9 @@ header {
 }
 
 .englishname p{
-  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
-  height: 30px;
+  width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  height: 40px;
+  margin-bottom: 5px;
   color: black;
   font-size:40px;
   font-weight: bold;
@@ -49,7 +67,7 @@ header {
   text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -57,7 +75,7 @@ header {
 }
 
 .japanesename p{
-  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 30px;
   font-size:20px;
   color: black;
@@ -66,7 +84,7 @@ header {
   text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  top: 85%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -123,6 +141,7 @@ header {
 }
 .global-navi a {
   color: black;
+  text-decoration: none;
 }
 .global-navi a:hover {
   color: black
@@ -140,11 +159,11 @@ header {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 5%;
   padding: 0px;
 }
 
 .intro {
+  padding-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -176,24 +195,6 @@ header {
   width: 100%;
   height:auto;
 }
-/*
-.mainImageWrapper p{
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  color: Black;
-  text-shadow:0 0 10px white;
-  top: 90%;
-  left: 90%;
-  -ms-transform: translate(-90%,-90%);
-  -webkit-transform: translate(-90%,-90%);
-  transform: translate(-90%,-90%);
-  font-size: 50px;
-  margin: 0;
-  padding: 0%;
-  padding-right: 10%;
-}
-*/
 
 .imagelinkgadget {
   display:flex;
@@ -239,27 +240,6 @@ header {
   padding: 0%;
 }
 
-/*
-.imgImageWrapper p{
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  color: black;
-  text-shadow:0 0 10px white;
-  top: 90%;
-  left: 90%;
-  -ms-transform: translate(-90%,-90%);
-  -webkit-transform: translate(-90%,-90%);
-  transform: translate(-90%,-90%);
-  font-size: 50px;
-  margin: 0;
-  padding: 0%;
-  padding-right: 10%;
-}
-*/
-
-
-
 .grayscale img{
   filter: grayscale(100%);
 }
@@ -271,6 +251,7 @@ footer {
   padding: 20px 0;
   background-color: black;
   color: white;
+  margin-top: 50px;
 }
 .foot li {
   padding: 5px;
@@ -292,20 +273,79 @@ footer {
   .maingadget {
     width:100%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 15%;
   }
   .mainImageWrapper {
     width:100%;
-    margin-bottom: 20px;
     margin:0 auto;
-  }  
+  }
+
+  .introwrapper {
+    width: 400px;
+    margin: 0 auto;
+    text-align:left;
+    font-size: 16px;
+    margin-bottom: 10%;
+  }
+  
+  .Title {
+   text-align:center;
+   margin: 0 auto;
+   padding-bottom: 20px;
+   font-size: 24px;
+  }
+  
+  .Description {
+    width: 80%;
+    margin:0 auto;
+  }
   .imgImageWrapper {
     width:90%;
-    margin-bottom: 20px;
     margin:0 auto;
+    margin-bottom: 15%;
   }
   .imgImageWrapper img {
     width:100%;
     height:auto;
+  }
+
+  .global-navi {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    position: static;
+  }
+  .global-navi ul li{
+    height: auto;
+    display:lock;
+    background-color: #1d1d1d;
+    opacity: 0.8;
+    text-align:center;
+    width:100%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .global-navi ul li p{
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+  }
+
+  .englishname p{
+    font-size:34px;
+  }
+  .japanesename p{
+    font-size:15px;
+    top:83%
+  }
+  .contactbtn i{
+    font-size: 30px;
+    top: 15px;
+    right: 20px;
+  }
+  .slick-dots {
+    bottom: 20px;
   }
 }
