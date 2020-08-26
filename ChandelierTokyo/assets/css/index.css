@@ -56,15 +56,18 @@ header {
   text-shadow:0 0 10px white;
 }
 
+.logo {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
 .englishname p{
   width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 40px;
   margin-bottom: 5px;
-  color: black;
   font-size:40px;
-  font-weight: bold;
   font-family: 'Dancing Script', cursive;
-  text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
   top: 30%;
@@ -78,10 +81,7 @@ header {
   width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 30px;
   font-size:20px;
-  color: black;
-  font-weight: bold;
   letter-spacing: 10px;
-  text-align: center;
   /*位置の設定 - 上下中央寄せ*/
   position: absolute;
   top: 89%;
@@ -149,7 +149,6 @@ header {
 .global-navi a:active {
   color: black;
 }
-
 
 
 .wrapper {

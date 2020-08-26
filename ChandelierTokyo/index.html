@@ -6,85 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/destyle.css" style="visibility: visible;">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" style="visibility: visible;">
-    <link rel="stylesheet" type="text/css" href="assets/js/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="assets/js/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" style="visibility: visible;">
-    <script type="text/javascript">
-        $(function () {
-            function animation() {
-                $('.fadeInUp').each(function () {
-                    //ターゲットの位置を取得
-                    var target = $(this).offset().top;
-                    //スクロール量を取得
-                    var scroll = $(window).scrollTop();
-                    //ウィンドウの高さを取得
-                    var windowHeight = $(window).height();
-                    //ターゲットまでスクロールするとフェードインする
-                    if (scroll > target - windowHeight + 500) {
-                        $(this).css('opacity', '1');
-                        $(this).css('transform', 'translateY(0)');
-                    }
-                });
-            }
-            animation();
-            $(window).scroll(function () {
-                animation();
-            });
-        });
-
-        $(function () {
-            function changeheader() {
-                $('.headerch').each(function () {
-                    //ターゲットの位置を取得
-                    var target = $(this).offset().top;
-                    //スクロール量を取得
-                    var scroll = $(window).scrollTop();
-                    //ウィンドウの高さを取得
-                    var windowHeight = $(window).height();
-                    var windowWidth = $(window).width();
-                    //ターゲットまでスクロールするとヘッダーロゴの位置が変わる
-                    if ((scroll > target ) && (windowWidth > 768)) {
-                        $('.englishname p').css('position', 'static');
-                        $('.englishname p').css('transform', 'translate(0, 0)');
-                        $('.englishname p').css('-webkit-transform', 'translate(0, 0)');
-                        $('.englishname p').css('-ms-transform', 'translate(0, 0)');
-                        $('.japanesename p').css('position', 'static');
-                        $('.japanesename p').css('transform', 'translate(0, 0)');
-                        $('.japanesename p').css('-webkit-transform', 'translate(0, 0)');
-                        $('.japanesename p').css('-ms-transform', 'translate(0, 0)');
-                    }else if ((scroll < target) && (windowWidth > 768)) {
-                        $('.englishname p').css('position', 'absolute');
-                        $('.englishname p').css('transform', 'translate(-50%, -50%)');
-                        $('.englishname p').css('-webkit-transform', 'translate(-50%, -50%)');
-                        $('.englishname p').css('-ms-transform', 'translate(-50%, -50%)');
-                        $('.japanesename p').css('position', 'absolute');
-                        $('.japanesename p').css('transform', 'translate(-50%, -50%)');
-                        $('.japanesename p').css('-webkit-transform', 'translate(-50%, -50%)');
-                        $('.japanesename p').css('-ms-transform', 'translate(-50%, -50%)');
-                    }
-                });
-            }
-            changeheader();
-            $(window).scroll(function () {
-                changeheader();
-            });
-        });
-
-    </script>
     <title>シャンデリアTOKYO</title>
 </head>
 
 <body>
     <header>
-        <div class="englishname">
+        <div class="englishname logo">
             <p>Chandelier TOKYO</p>
         </div>
-        <div class="japanesename">
+        <div class="japanesename logo">
             <p>シャンデリア東京</p>
         </div>
         <div class="contactbtn">
@@ -93,7 +31,7 @@
     </header>
     <div class="wrapper">
         <div class="maingadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="mainImageWrapper" 　id="photo">
+            <div class="mainImageWrapper">
                 <ul class="slick01">
                     <li><img alt="画像1" src="assets/img/top/test1.png" /></li>
                     <li><img alt="画像2" src="assets/img/top/test2.png" /></li>
@@ -120,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="intro medium col-md-12 col-sm-12 col-xs-12 website nolink headerch">
+        <div class="intro medium col-md-12 col-sm-12 col-xs-12 headerch">
             <div class="introwrapper fadeInUp">
                 <div class="Title">
                     <h4>シャンデリア東京とは</h4>
@@ -131,25 +69,22 @@
                 </div>
             </div>
         </div>
-        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
+        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12">
             <div class="fadeInUp imgImageWrapper">
                 <a href="introduction.html">
                     <p>About Chandelier</p>
                     <div class="imgonlywrapper">
-                        <img class="lazyloaded" data-src="6Q7A3663.JPG" title="" alt=""
-                            src="assets/img/top/6Q7A3663.JPG">
+                        <img title="" alt="" src="assets/img/top/6Q7A3663.JPG">
                     </div>
-
                 </a>
             </div>
         </div>
-        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
+        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12">
             <div class="imgImageWrapper grayscale fadeInUp">
                 <a href="AboutHistory.html">
                     <p>About Us</p>
                     <div class="imgonlywrapper">
-                        <img class="lazyloaded" data-src="6Q7A3638.JPG" title="" alt=""
-                            src="assets/img/top/6Q7A3638.JPG">
+                        <img title="" alt="" src="assets/img/top/6Q7A3638.JPG">
                     </div>
                 </a>
             </div>
@@ -161,17 +96,7 @@
             <li><a href="company.html">企業概要・アクセス</a></li>
         </ul>
     </footer>
-
-
-    <script>
-        $('.slick01').slick({
-            autoplay: true, //自動再生
-            dots: true, //ドットのナビゲーションを表示
-            infinite: true, //スライドのループ有効化
-            speed: 4000, //切り替えのスピード（小さくすると速くなる）
-            fade: true, //フェードの有効化
-        });
-    </script>
+    <script src="assets/js/common.js"></script>
 </body>
 
 </html>
