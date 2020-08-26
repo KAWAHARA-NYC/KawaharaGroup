@@ -9,7 +9,6 @@ body {
   padding: 0px;
   background-color: rgba(255, 255, 255, 0.979);
   color: #242424;
-  display: flex;
   flex-flow: column;
   min-height: 100vh;
   font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
@@ -34,7 +33,7 @@ body {
 }
 
 .slick-prev,.slick-next {
-    z-index: 100;
+    z-index: 98;
 }
 
 .slick-prev {
@@ -150,13 +149,7 @@ header {
   color: black;
 }
 
-
-.wrapper {
-  flex: 1;
-}
 .maingadget {
-  display:flex;
-  flex-direction: row;
   justify-content: center;
   padding: 0px;
 }
@@ -196,16 +189,14 @@ header {
 }
 
 .imagelinkgadget {
-  display:flex;
-  flex-direction: row;
   justify-content: center;
   padding: 0px;
+  margin-bottom: 7%;
 }
 
 .imgImageWrapper {
   width: 50%;
-  margin: 0 5%; 
-  margin-bottom: 5%;
+  margin: 0 auto; 
 }
 .imgonlywrapper {
   width: 100%;
@@ -232,7 +223,7 @@ header {
 .imgImageWrapper p{
   width: 100%;
   text-align: center;
-  color: black;/*文字は白に*/
+  color: black;
   text-shadow:0 0 10px white;
   font-size: 24px;
   margin: 0;
@@ -247,13 +238,13 @@ footer {
   width: 100%;
   font-size: 15px;
   text-align: center;
-  padding: 20px 0;
+  padding: 25px 0;
   background-color: black;
   color: white;
-  margin-top: 50px;
+  margin-top: 10%;
 }
 .foot li {
-  padding: 5px;
+  padding-bottom: 10px;
 }
 .foot a {
   color: white;
@@ -266,19 +257,15 @@ footer {
 }
 
 @media (max-width:768px) {
-  .imagelinkgadget {
-    flex-direction: column;
-  }
   .maingadget {
     width:100%;
     margin: 0 auto;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
   .mainImageWrapper {
     width:100%;
     margin:0 auto;
   }
-
   .introwrapper {
     width: 400px;
     margin: 0 auto;
@@ -286,28 +273,13 @@ footer {
     font-size: 16px;
     margin-bottom: 10%;
   }
-  
-  .Title {
-   text-align:center;
-   margin: 0 auto;
-   padding-bottom: 20px;
-   font-size: 24px;
-  }
-  
-  .Description {
-    width: 80%;
-    margin:0 auto;
-  }
   .imgImageWrapper {
     width:90%;
-    margin:0 auto;
-    margin-bottom: 15%;
   }
   .imgImageWrapper img {
     width:100%;
     height:auto;
   }
-
   .global-navi {
     width: 100%;
     margin: auto;
@@ -316,7 +288,7 @@ footer {
   }
   .global-navi ul li{
     height: auto;
-    display:lock;
+    display: block;
     background-color: #1d1d1d;
     opacity: 0.8;
     text-align:center;
@@ -331,7 +303,6 @@ footer {
     padding-bottom: 5px;
     color: white;
   }
-
   .englishname p{
     font-size:34px;
   }
@@ -346,5 +317,8 @@ footer {
   }
   .slick-dots {
     bottom: 20px;
+  }
+  footer {
+    margin-top: 20%;
   }
 }
