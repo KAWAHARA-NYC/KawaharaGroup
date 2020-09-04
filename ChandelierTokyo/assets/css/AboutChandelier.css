@@ -2,11 +2,10 @@ body {
   margin: 0;
   padding: 0px;
   background-color: rgba(255, 255, 255, 0.979);
-  color: black;
-  display: flex;
+  color: #242424;
   flex-flow: column;
   min-height: 100vh;
-  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
+  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
 }
 
 header {
@@ -16,156 +15,142 @@ header {
   background-color : white; 
   opacity: 0.8;
   z-index: 99;
-  margin-top: 4px;
+  margin-top: 0px;
   margin-bottom: 4px;
   padding-left: 10px;
+  text-shadow:0 0 10px white;
 }
-  
-#global-navi {
-  float:right;
-}
-header nav ul li{
-  height: 50px;
-  display:inline-block;
-  font-size: 22px;
-  margin: 25px 15px 15px 15px;
+
+.logo {
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
 .englishname p{
-  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
-  height: 30px;
-  color: black;
+  width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  height: 40px;
+  margin-bottom: 5px;
   font-size:40px;
-  font-weight: bold;
   font-family: 'Dancing Script', cursive;
   /*位置の設定 - 上下中央寄せ*/
-  position: absolute;
-  margin:0;
-  margin-left: 30px;
-  padding: 0px;
-  top: 0;
-  bottom: 0;
+  position: static;
+  top: 30%;
+  left: 50%;
+  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
 }
 
 .japanesename p{
-  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  width: 300px; 
   height: 30px;
   font-size:20px;
+  letter-spacing: 10px;
+  position: static;
+  top: 89%;
+  left: 50%;
+  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+}
+
+.contactbtn i{
+  font-size:46px;
   color: black;
   font-weight: bold;
-  letter-spacing: 10px;
-  /*位置の設定 - 上下中央寄せ*/
   position: absolute;
-  margin:0;
-  margin-top: 43px;
-  margin-left: 60px;
-  padding: 0px;
-  top: 0;
-  bottom: 0;
+  top: 5px;
+  right: 20px;
+}
+
+.fadeInUp {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: 1s;
 }
 
 .wrapper {
   flex: 1;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
+.intro {
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+
+.introwrapper {
+  width:570px;
+  margin: 0 auto;
+  text-align:left;
+  font-size: 15px;
+}
+
+.Description {
+  width: 80%;
+  margin:0 auto;
+}
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.imgcontents{
+	display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.imgcontents li {
+	width: 33%;/*←画像を横に4つ並べる場合*/
+	padding:8px;/*←画像の左右に5pxの余白を入れる場合*/
+  box-sizing:border-box;
+}
+li.longimage {
+  width: 30%;
+  padding:0px;
+}
+
+.imgcontents li img {
+	max-width:100%; /*画像のはみだしを防ぐ*/
+	height: auto; /*画像の縦横比を維持 */
+  border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+  margin-bottom: 8px;
+}
 .imagelinkgadget {
-  display:flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 40px;
-  padding: 2px;
 }
 
-.imgContentWrapper {
-  width: 50%;
-  margin: 3%;
-}
-
-h4 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-.imgDescription p {
-  text-align: left;
-  font-size: 16px;
-}
-
-.imgImageWrapper {
-  width: 50%;
-  margin: 0%;
-}
-
-.imgImageWrapper img {
-  width: 100%;
-  height:auto;
-}
-
-.imagelinkgadget:nth-child(even) {
-  flex-direction: row-reverse;
-}
-.imagelinkgadget:nth-child(even) .imgContentWrapper {
-  text-align: right;
-}
-.imagelinkgadget:nth-child(even) .imgImageWrapper {
-  margin-left: 0%;
-  margin-right: 0%;
-}
 
 footer {
   width: 100%;
   font-size: 15px;
   text-align: center;
-  padding: 20px 0;
-  background-color: rgb(41, 38, 58)
+  padding: 25px 0;
+  background-color: black;
+  color: white;
+  margin-top: 10%;
 }
 .foot li {
-  padding: 5px;
+  padding-bottom: 10px;
 }
-a {
-  color: #ab987a;
+.foot a {
+  color: white;
 }
-a:hover {
-  color: #ab987a;
+.foot a:hover {
+  color: white
 }
-a:active {
-  color: #ab987a;
+.foot a:active {
+  color: white;
 }
 
 @media (max-width:768px) {
   .imagelinkgadget {
     flex-direction: column;
-  }
-  .imagelinkgadget:nth-child(even) {
-    flex-direction: column;
-  }
-  .imgContentWrapper {
-    text-align: center;
-    width: 80%;
-    margin:0 auto;
-  }
-  h4 {
-    text-align: center;
-  }
-  .imgDescription p {
-    text-align: left;
-  }
-  .imagelinkgadget:nth-child(even) .imgContentWrapper {
-    text-align: center;
-  }
-  .imgImageWrapper {
-    width:100%;
-    margin-left: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .imagelinkgadget:nth-child(even) .imgImageWrapper {
-    margin-left: 0;
-    margin-right: 0%;
-  }
-  .imgImageWrapper img {
-    width:100%;
-    height:auto;
   }
 }

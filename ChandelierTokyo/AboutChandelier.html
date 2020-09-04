@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/destyle.css" style="visibility: visible;">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" style="visibility: visible;">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/AboutChandelier.css" style="visibility: visible;">
@@ -14,77 +15,61 @@
 
 <body>
     <header>
-        <div class="englishname">
+        <div class="englishname logo">
             <p>Chandelier TOKYO</p>
         </div>
-        <div class="japanesename">
+        <div class="japanesename logo">
             <p>シャンデリア東京</p>
         </div>
-        <nav id="global-navi">
-            <ul class="menu">
-                <li><a href=""><i class="fas fa-envelope"></i></a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="AboutChandelier.html">About Chandelier</a></li>
-                <li><a href="AboutHistory.html">About Us</a></li>
-            </ul>
-        </nav>
+        <div class="contactbtn">
+            <a href=""><i class="fas fa-envelope"></i></a>
+        </div>
     </header>
     <div class="wrapper">
-        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="imgImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier1.jpg" title="" alt="" src="Chandelier1.jpg">
-            </div>
-            <div class="imgContentWrapper">
-                <div class="tableWrapper">
-                    <div class="imgTitle">
-                        <h4>Chandelier</h4>
-                    </div>
-                    <div class="imgDescription">
-                        <p>シャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリア</p>
-                    </div>
-                    <div class="imgLink"><a></a></div>
+        <div class="intro">
+            <div class="introwrapper fadeInUp">
+                <div class="Description">
+                    <p>ショールームに展示してあるシャンデリア照明器具の一部です。<BR>
+                        是非一度ショールームに足を運んでみてください
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="imgImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier1.jpg" title="" alt="" src="Chandelier2.jpg">
+        <div class="AllimageWrapper">
+            <h4 class="fadeInUp">作品一覧</h4>
+            <div class="imagelinkgadget">
+                <ul class="fadeInUp imgcontents">
+                    <li class="longimage"><img src="assets/img/aboutchandelier/6Q7A3401.JPG" alt="バナー01です"></li>
+                    <li><img src="assets/img/aboutchandelier/6Q7A3330.JPG" alt="バナー01です">
+                        <img src="assets/img/aboutchandelier/6Q7A3706.JPG" alt="バナー01です"></li>
+                </ul>
             </div>
-            <div class="imgContentWrapper">
-                <div class="tableWrapper">
-                    <div class="imgTitle">
-                        <h4>Chandelier</h4>
-                    </div>
-                    <div class="imgDescription">
-                        <p>シャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリア</p>
-                    </div>
-                    <div class="imgLink"><a></a></div>
-                </div>
+            <div class="imagelinkgadget">
+                <ul class="fadeInUp imgcontents">
+                    <li><img src="assets/img/aboutchandelier/6Q7A3369.JPG" alt="バナー01です">
+                        <img src="assets/img/aboutchandelier/6Q7A3665.JPG" alt="バナー01です"></li>
+                    <li class="longimage"><img src="assets/img/aboutchandelier/6Q7A3515.JPG" alt="バナー01です"></li>
+                    <li><img src="assets/img/aboutchandelier/6Q7A3434.JPG" alt="バナー01です">
+                        <img src="assets/img/aboutchandelier/6Q7A3460.JPG" alt="バナー01です"></li>
+                </ul>
             </div>
-        </div>
-        <div class="imagelinkgadget medium col-md-12 col-sm-12 col-xs-12 website nolink">
-            <div class="imgImageWrapper">
-                <img class="lazyloaded" data-src="Chandelier1.jpg" title="" alt="" src="Chandelier3.jpg">
-            </div>
-            <div class="imgContentWrapper">
-                <div class="tableWrapper">
-                    <div class="imgTitle">
-                        <h4>Chandelier</h4>
-                    </div>
-                    <div class="imgDescription">
-                        <p>シャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリアシャンデリア</p>
-                    </div>
-                    <div class="imgLink"><a></a></div>
-                </div>
+            <div class="imagelinkgadget">
+                <ul class="fadeInUp imgcontents">
+                    <li><img src="assets/img/aboutchandelier/6Q7A3474.JPG" alt="バナー01です">
+                        <img src="assets/img/aboutchandelier/6Q7A3309.JPG" alt="バナー01です"></li>
+                    <li class="longimage"><img src="assets/img/aboutchandelier/6Q7A3549.JPG" alt="バナー01です"></li>
+                </ul>
             </div>
         </div>
     </div>
     <footer>
         <ul class="foot">
-            <li><a href="xxx.html">問い合わせ</a></li>
+            <li><a href="xxx.html">お問い合わせ</a></li>
             <li><a href="company.html">企業概要・アクセス</a></li>
         </ul>
+        <p>&copy;copy right 2020.kawahara</p>
     </footer>
+    <script src="assets/js/common.js"></script>
 </body>
 
 </html>
