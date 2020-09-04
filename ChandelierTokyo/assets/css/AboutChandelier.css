@@ -11,7 +11,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  height: 70px;
+  height: auto;
   background-color : white; 
   opacity: 0.8;
   z-index: 99;
@@ -21,47 +21,55 @@ header {
   text-shadow:0 0 10px white;
 }
 
+
 .logo {
   color: black;
   font-weight: bold;
   text-align: center;
 }
 
-.englishname p{
+.englishname {
   width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 40px;
+  margin:0;
   margin-bottom: 5px;
   font-size:40px;
   font-family: 'Dancing Script', cursive;
   /*位置の設定 - 上下中央寄せ*/
   position: static;
-  top: 30%;
-  left: 50%;
-  transform: translate(0%, 0%);
-  -webkit-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
 }
 
-.japanesename p{
+.japanesename {
   width: 300px; 
   height: 30px;
+  margin:0;
   font-size:20px;
   letter-spacing: 10px;
   position: static;
-  top: 89%;
-  left: 50%;
-  transform: translate(0%, 0%);
-  -webkit-transform: translate(0%, 0%);
-  -ms-transform: translate(0%, 0%);
 }
 
-.contactbtn i{
-  font-size:46px;
+.contactbtn{
+  font-size:36px;
   color: black;
   font-weight: bold;
   position: absolute;
   top: 5px;
   right: 20px;
+}
+.tel {
+  font-size:22px;
+}
+.Linkpath {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  font-weight: bold;
+  padding:0;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .fadeInUp {
@@ -123,26 +131,24 @@ h4 {
   margin-right: 100px;
 }
 .imgcontents li {
-	width: 33%;/*←画像を横に4つ並べる場合*/
-	padding:8px;/*←画像の左右に5pxの余白を入れる場合*/
+  display: flex;
+	width: 23%;/*←画像を横に4つ並べる場合*/
+  margin: 3px;
   box-sizing:border-box;
-}
-li.longimage {
-  width: 30%;
-  padding:0px;
+  border: 1px solid #aaa;
 }
 
 .imgcontents li img {
 	max-width:100%; /*画像のはみだしを防ぐ*/
 	height: auto; /*画像の縦横比を維持 */
   border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
-  margin-bottom: 8px;
-}
-.imagelinkgadget {
-  flex-direction: row;
-  justify-content: center;
 }
 
+.imgcontents li a {
+  margin: auto auto;
+  justify-content: center;
+  text-align: center;
+}
 
 footer {
   width: 100%;
@@ -167,7 +173,77 @@ footer {
 }
 
 @media (max-width:768px) {
-  .imagelinkgadget {
-    flex-direction: column;
+
+  .introwrapper {
+    width:400px;
+    margin: 0 auto;
+    text-align:left;
+    font-size: 15px;
+  }
+
+  .imgcontents{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .imgcontents li {
+    display: flex;
+    width: 40%;/*←画像を横に4つ並べる場合*/
+    margin: 3px;
+    box-sizing:border-box;
+    border: 1px solid #aaa;
+  }
+
+  .global-navi {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    position: static;
+  }
+  .global-navi ul li{
+    height: auto;
+    display: block;
+    background-color: #1d1d1d;
+    opacity: 0.8;
+    text-align:center;
+    width:100%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .global-navi ul li p{
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+  }
+  .englishname {
+    width: 250px; 
+    height: 35px;
+    font-size:34px;
+  }
+  .japanesename {
+    width: 250px; 
+    height: 20px;
+    font-size:15px;
+    letter-spacing: 7px;
+  }
+  .contactbtn{
+    font-size: 24px;
+    top: 15px;
+    right: 20px;
+  }
+  .tel {
+    font-size:14px;
+  }
+  .Linkpath {
+    text-align: center;
+    margin: 0 auto;
+    position: static;
+    padding:5px;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
   }
 }

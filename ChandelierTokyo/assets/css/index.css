@@ -61,7 +61,7 @@ header {
   text-align: center;
 }
 
-.englishname p{
+.englishname {
   width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 40px;
   margin-bottom: 5px;
@@ -76,7 +76,7 @@ header {
   -ms-transform: translate(-50%, -50%);
 }
 
-.japanesename p{
+.japanesename {
   width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
   height: 30px;
   font-size:20px;
@@ -90,13 +90,28 @@ header {
   -ms-transform: translate(-50%, -50%);
 }
 
-.contactbtn i{
+.contactbtn {
   font-size:46px;
   color: black;
   font-weight: bold;
   position: absolute;
   top: 5px;
   right: 20px;
+}
+.tel {
+  font-size:22px;
+}
+.Linkpath {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  font-weight: bold;
+  padding:0;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .global-navi {
@@ -308,10 +323,10 @@ footer {
     padding-bottom: 5px;
     color: white;
   }
-  .englishname p{
+  .englishname {
     font-size:34px;
   }
-  .japanesename p{
+  .japanesename {
     font-size:15px;
     top:83%
   }
@@ -319,6 +334,22 @@ footer {
     font-size: 30px;
     top: 15px;
     right: 20px;
+  }
+  .tel {
+    font-size:14px;
+    top: 15px;
+    right: 20px;
+  }
+  .Linkpath {
+    text-align: center;
+    margin: 0 auto;
+    position: static;
+    padding:5px;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
   }
   .slick-dots {
     bottom: 20px;
