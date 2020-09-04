@@ -70,6 +70,23 @@ header {
   transition: 1s;
 }
 
+/*Lightbox */
+.lb-cancel {
+  background: url(../js/plugin/lightbox/images/loading.gif) no-repeat;
+}
+.lb-nav a.lb-prev { 
+  width: 50%;
+  background: url(../js/plugin/lightbox/images/prev.png) left 48% no-repeat;
+}
+.lb-nav a.lb-next { 
+  width: 50%;
+  background: url(../js/plugin/lightbox/images/next.png) right 48% no-repeat;
+}
+.lb-data .lb-close {
+  background: url(../js/plugin/lightbox/images/close.png) top right no-repeat;
+}
+/*Lightbox */
+
 .wrapper {
   flex: 1;
   padding-top: 70px;
