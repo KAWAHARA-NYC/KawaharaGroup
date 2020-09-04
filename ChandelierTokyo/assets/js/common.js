@@ -37,7 +37,7 @@ $(function () {
                 $('.japanesename p').css('transform', 'translate(0, 0)');
                 $('.japanesename p').css('-webkit-transform', 'translate(0, 0)');
                 $('.japanesename p').css('-ms-transform', 'translate(0, 0)');
-            }else if ((scroll < target) && (windowWidth > 768)) {
+            }else if ((scroll < target) || (windowWidth > 768)) {
                 $('.englishname p').css('position', 'absolute');
                 $('.englishname p').css('transform', 'translate(-50%, -50%)');
                 $('.englishname p').css('-webkit-transform', 'translate(-50%, -50%)');
