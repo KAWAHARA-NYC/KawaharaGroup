@@ -91,7 +91,7 @@ header {
 }
 
 .contactbtn {
-  font-size:46px;
+  font-size:36px;
   color: black;
   font-weight: bold;
   position: absolute;
@@ -280,7 +280,7 @@ footer {
   .maingadget {
     width:100%;
     margin: 0 auto;
-    margin-bottom: 10%;
+    margin-bottom: 3%;
   }
   .mainImageWrapper {
     width:100%;
@@ -331,14 +331,12 @@ footer {
     top:83%
   }
   .contactbtn i{
-    font-size: 30px;
+    font-size: 24px;
     top: 15px;
     right: 20px;
   }
   .tel {
     font-size:14px;
-    top: 15px;
-    right: 20px;
   }
   .Linkpath {
     text-align: center;
