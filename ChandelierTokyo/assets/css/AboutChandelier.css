@@ -116,6 +116,12 @@ header {
   width: 80%;
   margin:0 auto;
 }
+
+.contentsgroup {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
 h4 {
   font-size: 20px;
   font-weight: bold;
@@ -135,13 +141,11 @@ h4 {
 	width: 23%;/*←画像を横に4つ並べる場合*/
   margin: 3px;
   box-sizing:border-box;
-  border: 1px solid #aaa;
 }
 
 .imgcontents li img {
 	max-width:100%; /*画像のはみだしを防ぐ*/
 	height: auto; /*画像の縦横比を維持 */
-  border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
 }
 
 .imgcontents li a {
@@ -186,11 +190,7 @@ footer {
     margin-right: 10px;
   }
   .imgcontents li {
-    display: flex;
-    width: 40%;/*←画像を横に4つ並べる場合*/
-    margin: 3px;
-    box-sizing:border-box;
-    border: 1px solid #aaa;
+    width: 40%;
   }
 
   .global-navi {
