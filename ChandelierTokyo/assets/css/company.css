@@ -1,185 +1,259 @@
 body {
-    margin: 0;
-    padding: 0px;
-    background-color: rgba(255, 255, 255, 0.979);
-    color: black;
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
-  }
+  margin: 0;
+  padding: 0px;
+  background-color: rgba(255, 255, 255, 0.979);
+  color: #242424;
+  flex-flow: column;
+  min-height: 100vh;
+  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
+}
   
-  header {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background-color : white; 
-    opacity: 0.8;
-    z-index: 99;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    padding-left: 10px;
-  }
-    
-  #global-navi {
-    float:right;
-  }
-  header nav ul li{
-    height: 50px;
-    display:inline-block;
-    font-size: 22px;
-    margin: 25px 15px 15px 15px;
-  }
+header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color : white; 
+  opacity: 0.8;
+  z-index: 99;
+  margin-top: 0px;
+  margin-bottom: 4px;
+  padding-left: 10px;
+  text-shadow:0 0 10px white;
+}
+
+
+.logo {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.englishname {
+  width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+  height: 40px;
+  margin:0;
+  margin-bottom: 5px;
+  font-size:40px;
+  font-family: 'Dancing Script', cursive;
+  /*位置の設定 - 上下中央寄せ*/
+  position: static;
+}
+
+.japanesename {
+  width: 300px; 
+  height: 30px;
+  margin:0;
+  font-size:20px;
+  letter-spacing: 10px;
+  position: static;
+}
+
+.contactbtn{
+  font-size:36px;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+.tel {
+  font-size:22px;
+}
+.Linkpath {
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  font-weight: bold;
+  padding:0;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
   
-  .englishname p{
-    width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
-    height: 30px;
-    color: black;
-    font-size:40px;
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
-    /*位置の設定 - 上下中央寄せ*/
-    position: absolute;
-    margin:0;
-    margin-left: 30px;
-    padding: 0px;
-    top: 0;
-    bottom: 0;
+  
+.wrapper {
+  flex: 1;
+  padding-top:150px;
+}
+
+h4 {
+  width:100%;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #979a9c;
+}
+  
+.outline {
+  margin: 60px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 18px;
+}
+
+.outline th {
+  padding: 8px 25px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.outline td {
+  width: 600px;
+  padding: 8px 25px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.accesswrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.imgImageWrapper {
+  margin-top:60px;
+  width: 60%;
+}
+.imgImageWrapper img {
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+}
+
+.accesswrapper ul {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 18px;
+}
+
+.mapwrapper {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  padding: 0 0 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  overflow:auto; 
+  -webkit-overflow-scrolling:touch;
+  border:2px solid #ccc; 
+}
+
+.mapwrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin:0 auto;
+  border:none;
+  display:block;
+}
+
+footer {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  padding: 25px 0;
+  background-color: black;
+  color: white;
+  margin-top: 10%;
+}
+.foot li {
+  padding-bottom: 10px;
+}
+.foot a {
+  color: white;
+}
+.foot a:hover {
+  color: white
+}
+.foot a:active {
+  color: white;
+}
+
+@media (max-width:768px) {
+  .imagelinkgadget {
+    flex-direction: column;
   }
-  
-  .japanesename p{
-    width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
-    height: 30px;
-    font-size:20px;
-    color: black;
-    font-weight: bold;
-    letter-spacing: 10px;
-    /*位置の設定 - 上下中央寄せ*/
-    position: absolute;
-    margin:0;
-    margin-top: 43px;
-    margin-left: 60px;
-    padding: 0px;
-    top: 0;
-    bottom: 0;
+  .imagelinkgadget:nth-child(even) {
+    flex-direction: column;
   }
+  .imgContentWrapper {
+    text-align: center;
+    width: 80%;
+    margin:0 auto;
+  }
+  h4 {
+    text-align: center;
+  }
+  .imgDescription p {
+    text-align: left;
+  }
+  .imgImageWrapper {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
   
-  
-  .wrapper {
-    flex: 1;
-    padding-top:150px;
+  .englishname {
+    width: 250px; 
+    height: 35px;
+    font-size:34px;
+  }
+  .japanesename {
+    width: 250px; 
+    height: 20px;
+    font-size:15px;
+    letter-spacing: 7px;
+  }
+  .contactbtn{
+    font-size: 24px;
+    top: 15px;
+    right: 20px;
+  }
+  .tel {
+    font-size:14px;
+  }
+  .Linkpath {
+    text-align: center;
+    margin: 0 auto;
+    position: static;
+    padding:5px;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
   }
 
   h4 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  .outline {
-    margin: 30px;
-    margin-left:auto;
-    margin-right:auto;
     font-size: 20px;
   }
 
+  .outline {
+    font-size: 16px;
+  }
+
   .outline th {
-    padding: 20px 25px;
-    border-bottom: 1px solid #979a9c;
-    vertical-align: top;
-    text-align: left;
+    padding: 10px 25px;
   }
 
   .outline td {
-    padding: 20px 25px;
-    border-bottom: 1px solid #979a9c;
-    vertical-align: top;
-    text-align: left;
+    width: 350px;
+    padding: 10px 25px;
   }
 
-  .accesswrapper {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 100px;
-  }
-  .mapandimg {
-    display: flex;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
-  }
   .mapwrapper {
-    width: 60%;
-    text-align: center;
-    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    padding: calc(450 / 650 * 100%) 0 0;
+    margin-bottom: 20px;
   }
-  .imgImageWrapper {
-    width: 40%;
-    margin-right: 3%;
-  }
-  .accesswrapper img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-  }
-  .accesswrapper ul {
-    list-style: disc;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 18px;
-  }
-  
-  footer {
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
-    padding: 20px 0;
-    background-color: rgb(41, 38, 58)
-  }
-  .foot li {
-    padding: 5px;
-  }
-  a {
-    color: #ab987a;
-  }
-  a:hover {
-    color: #ab987a;
-  }
-  a:active {
-    color: #ab987a;
-  }
-  
-  @media (max-width:768px) {
-    .imagelinkgadget {
-      flex-direction: column;
-    }
-    .imagelinkgadget:nth-child(even) {
-      flex-direction: column;
-    }
-    .imgContentWrapper {
-      text-align: center;
-      width: 80%;
-      margin:0 auto;
-    }
-    h4 {
-      text-align: center;
-    }
-    .imgDescription p {
-      text-align: left;
-    }
-    .imgImageWrapper {
-      width:100%;
-      margin-left: 0;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .imgImageWrapper img {
-      width:100%;
-      height:auto;
-    }
-  }
+
+}

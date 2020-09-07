@@ -8,7 +8,7 @@ $(function () {
             //ウィンドウの高さを取得
             var windowHeight = $(window).height();
             //ターゲットまでスクロールするとフェードインする
-            if (scroll > target - windowHeight + 500) {
+            if (scroll > target - windowHeight + 300) {
                 $(this).css('opacity', '1');
                 $(this).css('transform', 'translateY(0)');
             }
@@ -29,23 +29,23 @@ $(function () {
             var windowWidth = $(window).width();
             //ターゲットまでスクロール、画面幅がスマホではない場合のみ動作
             if ((scroll > target ) && (windowWidth > 768)) {
-                $('.englishname p').css('position', 'static');
-                $('.englishname p').css('transform', 'translate(0, 0)');
-                $('.englishname p').css('-webkit-transform', 'translate(0, 0)');
-                $('.englishname p').css('-ms-transform', 'translate(0, 0)');
-                $('.japanesename p').css('position', 'static');
-                $('.japanesename p').css('transform', 'translate(0, 0)');
-                $('.japanesename p').css('-webkit-transform', 'translate(0, 0)');
-                $('.japanesename p').css('-ms-transform', 'translate(0, 0)');
+                $('.englishname').css('position', 'static');
+                $('.englishname').css('transform', 'translate(0, 0)');
+                $('.englishname').css('-webkit-transform', 'translate(0, 0)');
+                $('.englishname').css('-ms-transform', 'translate(0, 0)');
+                $('.japanesename').css('position', 'static');
+                $('.japanesename').css('transform', 'translate(0, 0)');
+                $('.japanesename').css('-webkit-transform', 'translate(0, 0)');
+                $('.japanesename').css('-ms-transform', 'translate(0, 0)');
             }else if ((scroll < target) || (windowWidth > 768)) {
-                $('.englishname p').css('position', 'absolute');
-                $('.englishname p').css('transform', 'translate(-50%, -50%)');
-                $('.englishname p').css('-webkit-transform', 'translate(-50%, -50%)');
-                $('.englishname p').css('-ms-transform', 'translate(-50%, -50%)');
-                $('.japanesename p').css('position', 'absolute');
-                $('.japanesename p').css('transform', 'translate(-50%, -50%)');
-                $('.japanesename p').css('-webkit-transform', 'translate(-50%, -50%)');
-                $('.japanesename p').css('-ms-transform', 'translate(-50%, -50%)');
+                $('.englishname').css('position', 'absolute');
+                $('.englishname').css('transform', 'translate(-50%, -50%)');
+                $('.englishname').css('-webkit-transform', 'translate(-50%, -50%)');
+                $('.englishname').css('-ms-transform', 'translate(-50%, -50%)');
+                $('.japanesename').css('position', 'absolute');
+                $('.japanesename').css('transform', 'translate(-50%, -50%)');
+                $('.japanesename').css('-webkit-transform', 'translate(-50%, -50%)');
+                $('.japanesename').css('-ms-transform', 'translate(-50%, -50%)');
             }
         });
     }
