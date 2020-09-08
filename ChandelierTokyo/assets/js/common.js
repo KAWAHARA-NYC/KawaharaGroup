@@ -1,3 +1,14 @@
+function changeDisabled() {
+    if (document.Form1["entry.1495106858"][3].checked) {
+        document.Form1["entry.1495106858.other_option_response"].disabled = false;
+        $('.toiawasenaiyo').css('display', 'block');
+    } else {
+        document.Form1["entry.1495106858.other_option_response"].disabled = true;
+        $('.toiawasenaiyo').css('display', 'none');
+    }
+}
+window.onload = changeDisabled;
+
 $(function () {
     function animation() {
         $('.fadeInUp').each(function () {
@@ -63,3 +74,4 @@ $('.slick01').slick({
     autoplaySpeed: 2500, //自動再生のスピード
     fade: true, //フェードの有効化
 });
+

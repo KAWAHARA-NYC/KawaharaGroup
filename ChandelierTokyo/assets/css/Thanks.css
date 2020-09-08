@@ -78,83 +78,22 @@ header {
   padding-top:150px;
 }
 
-  
-h4 {
-  width:100%;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: center;
-  border-bottom: 1px solid #979a9c;
+.intro {
+  padding-top: 5%;
+  margin-bottom: 5%;
 }
 
-.required {
-  color:red;
-  font-size: 14px;
-  padding-left:8px;
+.introwrapper {
+  width:570px;
+  margin: 0 auto;
+  text-align:left;
+  font-size: 15px;
 }
-.contact-form {
+
+.Description {
+  width: 80%;
   margin:0 auto;
-  padding:20px;
-  width: 60%;
-  border: 1px solid gray;
-  border-radius: 0.4em;
 }
-
-.contact-formGroup {
-  margin:0 auto;
-  margin-bottom:30px;
-}
-
-.contact-formGroup label {
-  display: block;
-  font-size: 20px;
-  font-weight: bold;
-  padding-bottom:10px;
-}
-
-input {
-  width:100%;
-  border: 1px solid #ccc;
-  border-radius: 0.4em; 
-  padding: 0.5em; 
-}
-
-textarea {
-  resize: none;
-  border: 1px solid #ccc; 
-  border-radius: 0.4em;
-  padding: 0.5em;
-  width:100%;
-  height: 120px;
-  line-height: 1.2;
-}
-
-.radiogroup label {
-  display: block;
-  margin: 5px 0;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.radiogroup input {
-  width: auto;
-  margin-right:5px;
-}
-
-
-.contact-form__btn input {
-  text-align: center;
-  border: none;
-  border-radius: 2rem;
-
-  background-color: #86e7eb;
-  padding: 1rem 1rem;
-  font-weight: bold;
-}
-
-
-
 
 footer {
   width: 100%;
@@ -164,6 +103,8 @@ footer {
   background-color: black;
   color: white;
   margin-top: 10%;
+  position:absolute;
+	bottom:0;
 }
 .foot li {
   padding-bottom: 10px;
@@ -210,13 +151,11 @@ footer {
     -ms-transform: translate(0%, 0%);
   }
 
-  /*
-  .mapwrapper {
-    width: 80%;
-    height: 80%;
-    padding: calc(450 / 650 * 100%) 0 0;
-    margin-bottom: 20px;
+  .introwrapper {
+    width:400px;
+    margin: 0 auto;
+    text-align:left;
+    font-size: 15px;
   }
-  */
 
 }
