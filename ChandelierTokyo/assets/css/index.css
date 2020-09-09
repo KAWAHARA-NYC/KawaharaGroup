@@ -20,6 +20,7 @@ body {
   transition: 1s;
 }
 
+/* Slick */
 .slick-dotted.slick-slider {
   margin-bottom: 0px;
 }
@@ -42,7 +43,9 @@ body {
 .slick-next {
     right: 30px;
 }
+/* Slick */
 
+/* start header */
 header {
   position: fixed;
   width: 100%;
@@ -95,7 +98,7 @@ header {
   color: black;
   font-weight: bold;
   position: absolute;
-  top: 5px;
+  top: 20px;
   right: 20px;
 }
 .tel {
@@ -163,6 +166,32 @@ header {
 .global-navi a:active {
   color: black;
 }
+/* end header */
+
+/* start footer */
+
+footer {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  padding: 25px 0;
+  background-color: black;
+  color: white;
+  margin-top: 10%;
+}
+.foot li {
+  padding-bottom: 10px;
+}
+.foot a {
+  color: white;
+}
+.foot a:hover {
+  color: white
+}
+.foot a:active {
+  color: white;
+}
+/* end footer */
 
 .maingadget {
   justify-content: center;
@@ -254,27 +283,6 @@ header {
   filter: grayscale(100%);
 }
 
-footer {
-  width: 100%;
-  font-size: 15px;
-  text-align: center;
-  padding: 25px 0;
-  background-color: black;
-  color: white;
-  margin-top: 10%;
-}
-.foot li {
-  padding-bottom: 10px;
-}
-.foot a {
-  color: white;
-}
-.foot a:hover {
-  color: white
-}
-.foot a:active {
-  color: white;
-}
 
 @media (max-width:768px) {
   .maingadget {
@@ -300,6 +308,8 @@ footer {
     width:100%;
     height:auto;
   }
+
+  /* start header */
   .global-navi {
     width: 100%;
     margin: auto;
@@ -349,6 +359,8 @@ footer {
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
   }
+  /* end header */
+
   .slick-dots {
     bottom: 20px;
   }

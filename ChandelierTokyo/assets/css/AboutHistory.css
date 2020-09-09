@@ -19,9 +19,8 @@ header {
   margin-top: 0px;
   margin-bottom: 4px;
   padding-left: 10px;
-  text-shadow:0 0 10px white;
-}
 
+}
 
 .logo {
   color: black;
@@ -54,7 +53,7 @@ header {
   color: black;
   font-weight: bold;
   position: absolute;
-  top: 5px;
+  top: 20px;
   right: 20px;
 }
 .tel {
@@ -66,11 +65,60 @@ header {
   position: absolute;
   font-weight: bold;
   padding:0;
-  bottom: 20%;
+  Top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.global-navi {
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+}
+.global-navi ul{
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+  font-size:0;
+}
+.global-navi ul li{
+  height: auto;
+  display:inline-block;
+  background-color: #1d1d1d;
+  opacity: 0.9;
+  text-align:center;
+  width:20%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.global-navi ul li:hover {
+  background-color: white;
+  color: #1d1d1d;
+}
+
+.global-navi ul li p:hover {
+  color: #1d1d1d;
+}
+
+.global-navi ul li p{
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+.global-navi a {
+  color: black;
+  text-decoration: none;
+}
+.global-navi a:hover {
+  color: black
+}
+.global-navi a:active {
+  color: black;
 }
 /* end header */
 
@@ -101,19 +149,16 @@ footer {
 
 .wrapper {
   flex: 1;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
-p {
-  line-height: 1.5em;
-  font-size: 16px;
-}
 
 .introwrapper {
   width:570px;
   margin: 0 auto;
   text-align:left;
-  font-size: 18px;
+  line-height: 1.5em;
+  font-size: 16px;
   padding-top: 5%;
   margin-bottom: 5%;
 }
@@ -125,6 +170,8 @@ p {
 
 .ContentsWrapper {
   display: flex;
+  line-height: 1.5em;
+  font-size: 16px;
   margin:0 8%;
   margin-bottom: 40px;
 }
@@ -194,7 +241,6 @@ h4 {
   }
 
   /* start header */
-
   .englishname {
     width: 250px; 
     height: 35px;
@@ -224,6 +270,28 @@ h4 {
     transform: translate(0%, 0%);
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
+  }
+  .global-navi {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    position: static;
+  }
+  .global-navi ul li{
+    height: auto;
+    display: block;
+    background-color: #1d1d1d;
+    opacity: 0.8;
+    text-align:center;
+    width:100%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .global-navi ul li p{
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
   }
   /* end header */
 }

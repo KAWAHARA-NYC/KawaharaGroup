@@ -8,6 +8,7 @@ body {
   font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
 }
 
+/* start header */
 header {
   position: fixed;
   width: 100%;
@@ -18,9 +19,8 @@ header {
   margin-top: 0px;
   margin-bottom: 4px;
   padding-left: 10px;
-  text-shadow:0 0 10px white;
-}
 
+}
 
 .logo {
   color: black;
@@ -53,7 +53,7 @@ header {
   color: black;
   font-weight: bold;
   position: absolute;
-  top: 5px;
+  top: 20px;
   right: 20px;
 }
 .tel {
@@ -65,12 +65,87 @@ header {
   position: absolute;
   font-weight: bold;
   padding:0;
-  bottom: 20%;
+  Top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.global-navi {
+  width: 100%;
+  margin: auto;
+  padding: 0px;
+}
+.global-navi ul{
+  margin:0 auto;
+  padding:0;
+  list-style:none;
+  font-size:0;
+}
+.global-navi ul li{
+  height: auto;
+  display:inline-block;
+  background-color: #1d1d1d;
+  opacity: 0.9;
+  text-align:center;
+  width:20%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.global-navi ul li:hover {
+  background-color: white;
+  color: #1d1d1d;
+}
+
+.global-navi ul li p:hover {
+  color: #1d1d1d;
+}
+
+.global-navi ul li p{
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+.global-navi a {
+  color: black;
+  text-decoration: none;
+}
+.global-navi a:hover {
+  color: black
+}
+.global-navi a:active {
+  color: black;
+}
+/* end header */
+
+/* start footer */
+
+footer {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  padding: 25px 0;
+  background-color: black;
+  color: white;
+  margin-top: 10%;
+}
+.foot li {
+  padding-bottom: 10px;
+}
+.foot a {
+  color: white;
+}
+.foot a:hover {
+  color: white
+}
+.foot a:active {
+  color: white;
+}
+/* end footer */
 
 .fadeInUp {
   opacity : 0;
@@ -97,7 +172,7 @@ header {
 
 .wrapper {
   flex: 1;
-  padding-top: 70px;
+  padding-top: 140px;
 }
 
 .intro {
@@ -193,29 +268,7 @@ footer {
     width: 40%;
   }
 
-  .global-navi {
-    width: 100%;
-    margin: auto;
-    padding: 0px;
-    position: static;
-  }
-  .global-navi ul li{
-    height: auto;
-    display: block;
-    background-color: #1d1d1d;
-    opacity: 0.8;
-    text-align:center;
-    width:100%;
-    font-size: 20px;
-    margin: 0 auto;
-  }
-
-  .global-navi ul li p{
-    margin: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-  }
+  /* start header */
   .englishname {
     width: 250px; 
     height: 35px;
@@ -246,4 +299,27 @@ footer {
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
   }
+  .global-navi {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    position: static;
+  }
+  .global-navi ul li{
+    height: auto;
+    display: block;
+    background-color: #1d1d1d;
+    opacity: 0.8;
+    text-align:center;
+    width:100%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .global-navi ul li p{
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+  }
+  /* end header */
 }
