@@ -1,16 +1,3 @@
-function changeDisabled() {
-    if (document.Form1["entry.1495106858"][3].checked) {
-        document.Form1["entry.1495106858.other_option_response"].disabled = false;
-        document.Form1["entry.1495106858.other_option_response"].required = true;
-        $('.toiawasenaiyo').css('display', 'block');
-    } else {
-        document.Form1["entry.1495106858.other_option_response"].disabled = true;
-        document.Form1["entry.1495106858.other_option_response"].required = false;
-        $('.toiawasenaiyo').css('display', 'none');
-    }
-}
-window.onload = changeDisabled;
-
 $(function () {
     function animation() {
         $('.fadeInUp').each(function () {

@@ -76,6 +76,9 @@ header {
 .wrapper {
   flex: 1;
   padding-top:150px;
+  position:relative;
+  min-height: 100vh;
+  padding-bottom:200px;
 }
 
   
@@ -164,6 +167,8 @@ footer {
   background-color: black;
   color: white;
   margin-top: 10%;
+  position:absolute;
+	bottom:0;
 }
 .foot li {
   padding-bottom: 10px;
@@ -210,13 +215,5 @@ footer {
     -ms-transform: translate(0%, 0%);
   }
 
-  /*
-  .mapwrapper {
-    width: 80%;
-    height: 80%;
-    padding: calc(450 / 650 * 100%) 0 0;
-    margin-bottom: 20px;
-  }
-  */
 
 }

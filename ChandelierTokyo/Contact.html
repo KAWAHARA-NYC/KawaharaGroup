@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/destyle.css" style="visibility: visible;">
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <script type="text/javascript">var submitted = false;</script>
     <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/contact.css" style="visibility: visible;">
     <title>シャンデリアTOKYO</title>
@@ -31,86 +32,65 @@
     </header>
     <div class="wrapper">
         <h4>お問合せ</h4>
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
-        <form class="contact-form" name="Form1"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfUOFI-RwRRjMQ6VfkftTSasZ3alPb0O4-IBe5-Z6Q2qwlHQ/formResponse"  target="hidden_iframe" onsubmit="submitted=true;">
-            <!-- お名前 テキスト入力 -->
-            <div class="contact-formGroup">
-                <label>お名前<span class="required">*</span></label>
-                <input type="text" name="entry.1690203451" required>
-            </div>
-            <!--//END お名前 テキスト入力 -->
-
-            <!-- メールアドレス入力 -->
-            <div class="contact-formGroup">
-                <label>メールアドレス<span class="required">*</span></label>
-                <input type="email" name="entry.537968795" required>
-            </div>
-            <!--//End メールアドレス入力 -->
-
-            <!-- 電話番号入力 -->
-            <div class="contact-formGroup">
-                <label>電話番号</label>
-                <input type="tel" name="entry.1208304358" required>
-            </div>
-            <!--//End 電話番号入力 -->
-
-            <!-- 住所 -->
-            <div class="contact-formGroup">
-                <label>お住まい<span class="required">*</span></label>
-                <input type="text" id="address" name="entry.180164622" required>
-            </div>
-            <!--//End 住所 -->
-
-            <!-- 個人/法人区分-->
-            <div class="contact-formGroup">
-                <label>個人/法人区分<span class="required">*</span></label>
-                <div class="radiogroup">
-                    <label><input type="radio" name="entry.1906762036" value="個人" required>個人</label>
-                    <label><input type="radio" name="entry.1906762036" value="法人">法人</label>
+        <div class="p-formArea" id="postForm">
+            <form class="contact-form" name="Form1" v-on:submit.prevent="submit" v-if="showForm">
+                <div class="contact-formGroup">
+                    <label>お名前<span class="required">*</span></label>
+                    <input type="text" v-model="userName" required>
                 </div>
-            </div>
-            <!--//End 個人/法人区分 -->
-
-            <!-- お問合せ種別 -->
-            <div class="contact-formGroup">
-                <label>お問合せ種別<span class="required">*</span></label>
-                <div class="radiogroup">
-                    <label><input type="radio" name="entry.1495106858" value="購入検討" onClick="changeDisabled()"
-                            required>購入検討</label>
-                    <label><input type="radio" name="entry.1495106858" value="話を聞きたい"
-                            onClick="changeDisabled()">話を聞きたい</label>
-                    <label><input type="radio" name="entry.1495106858" value="見積もりをしたい"
-                            onClick="changeDisabled()">見積もりをしたい</label>
-                    <label class="toiawaseetc"><input type="radio" name="entry.1495106858" value="__other_option__"
-                            onClick="changeDisabled()">その他
+                <div class="contact-formGroup">
+                    <label>メールアドレス<span class="required">*</span></label>
+                    <input type="email" v-model="email" required>
                 </div>
-                <input type="text" class="toiawasenaiyo" name="entry.1495106858.other_option_response"></label>
+                <div class="contact-formGroup">
+                    <label>電話番号</label>
+                    <input type="tel" v-model="tel" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お住まい<span class="required">*</span></label>
+                    <input type="text"  v-model="address" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>個人/法人区分<span class="required">*</span></label>
+                    <div class="radiogroup">
+                        <label><input type="radio" value="個人" v-model="userType" required>個人</label>
+                        <label><input type="radio" value="法人" v-model="userType" >法人</label>
+                    </div>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お問合せ種別<span class="required">*</span></label>
+                    <div class="radiogroup">
+                        <label><input type="radio" value="購入検討" v-model="contactType" onClick="changeDisabled()" name="contactType" required>購入検討</label>
+                        <label><input type="radio" value="話を聞きたい" v-model="contactType" onClick="changeDisabled()" name="contactType">話を聞きたい</label>
+                        <label><input type="radio" value="見積もりをしたい" v-model="contactType" onClick="changeDisabled()" name="contactType">見積もりをしたい</label>
+                        <label class="toiawaseetc"><input type="radio" value="__other_option__" v-model="contactType" onClick="changeDisabled()" name="contactType" >その他
+                    </div>
+                    <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お問合せ内容</label>
+                    <textarea id="content" v-model="content"></textarea>
+                </div>
+                <div class="contact-form__btn">
+                    <input type="submit" value="送信する">
+                </div>
+            </form>
+            <div class="p-formSucess" v-else>
+                <p class="c-text--lg u-txt-center u-color-main">ご登録ありがとうございます!</p>
+                <p class="c-text u-txt-center">入力頂いた内容が登録されました。入力内容は全てダミー情報として扱います。</p>
+                <div class="c-btn"><a class="c-btn__link" href="/">入力画面を表示</a></div>
             </div>
-            <!--//End お問合せ種別 -->
-
-            <!-- お問合せ内容 テキスト入力 -->
-            <div class="contact-formGroup">
-                <label>お問合せ内容</label>
-                <textarea id="content" name="entry.258805767" required></textarea>
-            </div>
-            <!--//End お問合せ内容 テキスト入力 -->
-
-            <!-- 送信 -->
-            <div class="contact-form__btn">
-                <input type="submit" value="送信する">
-            </div>
-            <!--//End 送信 -->
-        </form>
+        </div>
+        <footer>
+            <ul class="foot">
+                <li><a href="Contact.html">お問い合わせ</a></li>
+                <li><a href="company.html">企業概要・アクセス</a></li>
+            </ul>
+            <p>&copy;copy right 2020.kawahara</p>
+        </footer>
     </div>
-    <footer>
-        <ul class="foot">
-            <li><a href="Contact.html">お問い合わせ</a></li>
-            <li><a href="company.html">企業概要・アクセス</a></li>
-        </ul>
-        <p>&copy;copy right 2020.kawahara</p>
-    </footer>
-    <script src="assets/js/common.js"></script>
+
+    <script src="assets/js/contact.js"></script>
     </script>
 </body>
 
