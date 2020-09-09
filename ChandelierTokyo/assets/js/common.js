@@ -63,3 +63,4 @@ $('.slick01').slick({
     autoplaySpeed: 2500, //自動再生のスピード
     fade: true, //フェードの有効化
 });
+

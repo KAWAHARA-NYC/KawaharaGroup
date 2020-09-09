@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/destyle.css" style="visibility: visible;">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/contact.css" style="visibility: visible;">
+    <title>シャンデリアTOKYO</title>
+</head>
+
+<body>
+    <header>
+        <div class="englishname logo">
+            <a href="index.html">Chandelier TOKYO</a>
+        </div>
+        <div class="japanesename logo">
+            <a href="index.html">シャンデリア東京</a>
+        </div>
+        </a>
+        <div class="contactbtn">
+            <a href="Contact.html"><i class="fas fa-envelope"></i> </a><span class="tel"> 03-xxxx-xxxx</span>
+        </div>
+
+        <div class="Linkpath"><a href="index.html">HOME</a> > <a href="Contact.html">お問合せ</a></div>
+    </header>
+    <div class="wrapper">
+        <h4>お問合せ</h4>
+        <div class="p-formArea" id="postForm">
+            <form class="contact-form" name="Form1" v-on:submit.prevent="submit" v-if="showForm">
+                <div class="contact-formGroup">
+                    <label>お名前<span class="required">*</span></label>
+                    <input type="text" v-model="userName" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>メールアドレス<span class="required">*</span></label>
+                    <input type="email" v-model="email" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>電話番号</label>
+                    <input type="tel" v-model="tel" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お住まい<span class="required">*</span></label>
+                    <input type="text"  v-model="address" required>
+                </div>
+                <div class="contact-formGroup">
+                    <label>個人/法人区分<span class="required">*</span></label>
+                    <div class="radiogroup">
+                        <label><input type="radio" value="個人" v-model="userType" required>個人</label>
+                        <label><input type="radio" value="法人" v-model="userType" >法人</label>
+                    </div>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お問合せ種別<span class="required">*</span></label>
+                    <div class="radiogroup">
+                        <label><input type="radio" value="購入検討" v-model="contactType" onClick="changeDisabled()" name="contactType" required>購入検討</label>
+                        <label><input type="radio" value="話を聞きたい" v-model="contactType" onClick="changeDisabled()" name="contactType">話を聞きたい</label>
+                        <label><input type="radio" value="見積もりをしたい" v-model="contactType" onClick="changeDisabled()" name="contactType">見積もりをしたい</label>
+                        <label class="toiawaseetc"><input type="radio" value="__other_option__" v-model="contactType" onClick="changeDisabled()" name="contactType" >その他
+                    </div>
+                    <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
+                </div>
+                <div class="contact-formGroup">
+                    <label>お問合せ内容</label>
+                    <textarea id="content" v-model="content"></textarea>
+                </div>
+                <div class="contact-form__btn">
+                    <input type="submit" value="送信する">
+                </div>
+            </form>
+            <div class="p-formSucess" v-else>
+                <p class="c-text--lg u-txt-center u-color-main">ご登録ありがとうございます!</p>
+                <p class="c-text u-txt-center">入力頂いた内容が登録されました。入力内容は全てダミー情報として扱います。</p>
+                <div class="c-btn"><a class="c-btn__link" href="/">入力画面を表示</a></div>
+            </div>
+        </div>
+        <footer>
+            <ul class="foot">
+                <li><a href="Contact.html">お問い合わせ</a></li>
+                <li><a href="company.html">企業概要・アクセス</a></li>
+            </ul>
+            <p>&copy;copy right 2020.kawahara</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/contact.js"></script>
+    </script>
+</body>
+
+</html>
