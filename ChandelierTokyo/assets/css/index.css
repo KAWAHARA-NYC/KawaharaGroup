@@ -54,7 +54,6 @@ header {
   z-index: 99;
   margin-top: 0px;
   margin-bottom: 4px;
-  padding-left: 10px;
   text-shadow:0 0 10px white;
 }
 
@@ -126,39 +125,33 @@ header {
 }
 .global-navi ul{
   margin:0 auto;
-  padding:0;
   list-style:none;
-  font-size:0;
+  display:flex;
 }
 .global-navi ul li{
-  height: auto;
-  display:inline-block;
+  display: flex;
   background-color: #1d1d1d;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align:center;
+  align-items: stretch;
   width:20%;
   font-size: 20px;
-  margin: 0 auto;
 }
 
 .global-navi ul li:hover {
   background-color: white;
   color: #1d1d1d;
 }
-
-.global-navi ul li p:hover {
-  color: #1d1d1d;
-}
-
-.global-navi ul li p{
-  margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
-}
 .global-navi a {
-  color: black;
+  color: white;
+  font-size: 20px;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .global-navi a:hover {
   color: black
@@ -311,24 +304,19 @@ footer {
 
   /* start header */
   .global-navi {
-    width: 100%;
-    margin: auto;
-    padding: 0px;
     position: static;
   }
+  .global-navi ul{
+    flex-direction: column; 
+  }
   .global-navi ul li{
-    height: auto;
-    display: block;
     background-color: #1d1d1d;
-    opacity: 0.8;
-    text-align:center;
     width:100%;
     font-size: 20px;
-    margin: 0 auto;
+    min-height: 56px;
   }
 
-  .global-navi ul li p{
-    margin: 0px;
+  .global-navi ul li a{
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
