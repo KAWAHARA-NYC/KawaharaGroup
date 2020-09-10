@@ -199,18 +199,18 @@ h4 {
 	display: flex;
   flex-wrap:wrap;
   justify-content: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 .imgcontents li {
   display: flex;
-	width: 23%;/*←画像を横に4つ並べる場合*/
-  margin: 3px;
+	width: 20%;/*←画像を横に4つ並べる場合*/
+  margin: 10px;
   box-sizing:border-box;
 }
 
 .imgcontents li img {
-	max-width:100%; /*画像のはみだしを防ぐ*/
+	max-width:90%; /*画像のはみだしを防ぐ*/
 	height: auto; /*画像の縦横比を維持 */
 }
 
