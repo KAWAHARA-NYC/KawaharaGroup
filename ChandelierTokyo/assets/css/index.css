@@ -11,7 +11,7 @@ body {
   color: #242424;
   flex-flow: column;
   min-height: 100vh;
-  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',YuGothic,"Yu Gothic";
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
 }
 
 .fadeInUp {
