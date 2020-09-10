@@ -14,7 +14,6 @@ header {
   width: 100%;
   height: auto;
   background-color : white; 
-  opacity: 0.8;
   z-index: 99;
   margin-top: 0px;
   margin-bottom: 4px;
@@ -84,7 +83,7 @@ header {
 .global-navi ul li{
   display: flex;
   background-color: #1d1d1d;
-  opacity: 0.9;
+  opacity: 1;
   text-align:center;
   align-items: stretch;
   width:20%;
