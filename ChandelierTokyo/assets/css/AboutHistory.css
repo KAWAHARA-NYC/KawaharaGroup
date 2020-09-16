@@ -23,7 +23,7 @@
   line-height: 1.5em;
   font-size: 16px;
   margin:0 8%;
-  margin-bottom: 40px;
+  margin-bottom: 5%;
 }
 
 .SubContentsWrapper {
@@ -42,7 +42,8 @@
 }
 
 .SentenceWrapper {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto ;
 }
 
 .OneContentsWrapper {
@@ -50,15 +51,9 @@
   margin:0 auto;
 }
 
-h4 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-align: center;
-}
+
 .imgDescription p {
   text-align: left;
-
 }
 
 @media (max-width:768px) {
@@ -72,9 +67,6 @@ h4 {
     text-align: center;
     width: 80%;
     margin:0 auto;
-  }
-  h4 {
-    text-align: center;
   }
   .imgDescription p {
     text-align: left;

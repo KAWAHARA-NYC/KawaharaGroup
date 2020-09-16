@@ -14,11 +14,6 @@ body {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica",YuGothic,"Yu Gothic";
 }
 
-.fadeInUp {
-  opacity : 0;
-  transform: translateY(20px);
-  transition: 1s;
-}
 
 /* Slick */
 .slick-dotted.slick-slider {
@@ -52,12 +47,6 @@ header {
   text-shadow:0 0 10px white;
 }
 
-.logo {
-  color: black;
-  font-weight: bold;
-  text-align: center;
-}
-
 .englishname {
   position: absolute;
   top: 30%;
@@ -76,7 +65,6 @@ header {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
-
 
 .global-navi {
   position: absolute;
@@ -103,14 +91,6 @@ header {
   padding-top: 5%;
   margin-bottom: 5%;
 }
-
-.introwrapper {
-  width:570px;
-  margin: 0 auto;
-  text-align:left;
-  font-size: 16px;
-}
-
 .Title {
  text-align:center;
  margin: 0 auto;
@@ -118,10 +98,6 @@ header {
  font-size: 24px;
 }
 
-.Description {
-  width: 80%;
-  margin:0 auto;
-}
 
 .mainImageWrapper {
   width: 100%;
@@ -139,7 +115,7 @@ header {
   margin-bottom: 7%;
 }
 
-.imgImageWrapper {
+.ImageAnimeWrapper {
   width: 50%;
   margin: 0 auto; 
   position: relative;
@@ -152,20 +128,20 @@ header {
   overflow: hidden; 
 }
 
-.imgImageWrapper img {
+.ImageAnimeWrapper img {
   width: 100%;
   height:auto;
   transition:1.1s all;
 }
 
-.imgImageWrapper a:hover img {
+.ImageAnimeWrapper a:hover img {
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.6;
   transform:scale(1.1,1.1);
-  transition:1.6s all;
+  transition:1.4s all;
 }
 
-.imgImageWrapper p{
+.ImageAnimeWrapper p{
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -202,10 +178,10 @@ header {
     font-size: 16px;
     margin-bottom: 10%;
   }
-  .imgImageWrapper {
+  .ImageAnimeWrapper {
     width:90%;
   }
-  .imgImageWrapper img {
+  .ImageAnimeWrapper img {
     width:100%;
     height:auto;
   }
