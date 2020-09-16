@@ -1,135 +1,64 @@
-body {
-  margin: 0;
-  padding: 0px;
-  background-color: rgba(255, 255, 255, 0.979);
-  color: black;
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
-  font-family: 'Playfair Display',Gerogia,Times,'Times New Roman',serif;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  background-color : white; 
-  opacity: 0.8;
-  z-index: 99;
-  font-size: 30px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  padding-left: 10px;
-}
-  
-#global-navi {
-  float:right;
-}
-header nav ul li{
-  height: 50px;
-  display:inline-block;
-  font-size: 22px;
-  margin: 20px 15px 15px 15px;
-}
-
-header p{
-  width: 30%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
-  height: 30px;
-  color: black;
-  font-weight: bold;
-
-  /*位置の設定 - 上下中央寄せ*/
-  position: absolute;
-  margin: auto;
-  padding: 5px;
-  top: 0;
-  bottom: 0;
-}
-
-
 .wrapper {
   flex: 1;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
-.maingadget {
-  padding:0px 150px 30px;
-  padding-bottom: 30px;
+.introwrapper {
+  width:570px;
+  margin: 0 auto;
   text-align:left;
-  font-size: 22px;
+  line-height: 1.5em;
+  font-size: 16px;
+  padding-top: 5%;
+  margin-bottom: 5%;
 }
 
-.maingadget p {
-  width: 80%;
+.Description {
+  width: 100%;
   margin:0 auto;
 }
 
-.imagelinkgadget {
-  display: block;
-  justify-content: center;
-  text-align:center;
-  margin: 0 auto;
+.ContentsWrapper {
+  display: flex;
+  line-height: 1.5em;
+  font-size: 16px;
+  margin:0 8%;
   margin-bottom: 40px;
-  padding: 40px;
 }
 
-.left {
-  padding-right:0px;
-}
-.right {
-  padding-left:0px;
+.SubContentsWrapper {
+  margin: 0 20px;
 }
 
-.imgImageWrapper img {
+.ImageWrapper {
   width: 100%;
   height:auto;
-  margin: 0 auto;
-  padding: 30px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.imgContentWrapper {
+.ImageWrapper img {
   width: 100%;
-  padding: 5%;
+  height:auto;
+}
 
+.SentenceWrapper {
+  width: 100%;
+}
+
+.OneContentsWrapper {
+  display: block;
+  margin:0 auto;
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
 }
 .imgDescription p {
   text-align: left;
-  margin:30px;
-  font-size: 20px;
-}
 
-.imgImageWrapper {
-  width: 100%;
-  height:auto;
-  margin: 0%;
-}
-
-footer {
-  width: 100%;
-  font-size: 15px;
-  text-align: center;
-  padding: 20px 0;
-  background-color: rgb(41, 38, 58)
-}
-.foot li {
-  padding: 5px;
-}
-a {
-  color: #ab987a;
-}
-a:hover {
-  color: #ab987a;
-}
-a:active {
-  color: #ab987a;
 }
 
 @media (max-width:768px) {
@@ -160,4 +89,5 @@ a:active {
     width:100%;
     height:auto;
   }
+
 }
