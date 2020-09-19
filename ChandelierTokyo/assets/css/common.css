@@ -32,7 +32,6 @@ header {
     margin-bottom: 5px;
     font-size:40px;
     font-family: 'Dancing Script', cursive;
-    /*位置の設定 - 上下中央寄せ*/
     position: static;
 }
 
@@ -180,6 +179,11 @@ footer {
   font-weight: bold;
 }
 
+.fadeInUp {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
 
 @media (max-width:768px) {
   /* start header */
@@ -217,7 +221,6 @@ footer {
     flex-direction: column; 
   }
   .global-navi ul li{
-    /* background-color: #1d1d1d; */
     width:100%;
     font-size: 20px;
     min-height: 56px;

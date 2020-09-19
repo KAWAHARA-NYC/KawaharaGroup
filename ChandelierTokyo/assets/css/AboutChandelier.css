@@ -1,9 +1,3 @@
-.fadeInUp {
-  opacity : 0;
-  transform: translateY(20px);
-  transition: 1s;
-}
-
 /*Lightbox */
 .lb-cancel {
   background: url(../js/plugin/lightbox/images/loading.gif) no-repeat;
