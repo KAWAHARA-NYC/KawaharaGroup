@@ -32,7 +32,6 @@ header {
     margin-bottom: 5px;
     font-size:40px;
     font-family: 'Dancing Script', cursive;
-    /*位置の設定 - 上下中央寄せ*/
     position: static;
 }
 
@@ -73,6 +72,7 @@ header {
     width: 100%;
     margin: auto;
     padding: 0px;
+    border-bottom: 1px solid #1d1d1d;
 }
 .global-navi ul{
     margin:0 auto;
@@ -81,12 +81,13 @@ header {
 }
 .global-navi ul li{
     display: flex;
-    background-color: #1d1d1d;
     opacity: 1;
     text-align:center;
     align-items: stretch;
-    width:20%;
+    width:25%;
     font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    color:#7e7e7e;
 }
 
 .global-navi ul li:hover {
@@ -94,7 +95,7 @@ header {
     color: #1d1d1d;
 }
 .global-navi a {
-    color: white;
+    color:#a7a7a7;
     font-size: 20px;
     text-decoration: none;
     align-items: center;
@@ -109,6 +110,26 @@ header {
 }
 .global-navi a:active {
     color: black;
+}
+
+.global-navi ul li.global-navi-item-active a{
+  color: #1d1d1d;
+}
+
+.global-navi ul li.global-navi-item-active a div.radius-underline div{
+  padding-bottom: 3%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  width: 12rem;
+}
+
+.global-navi ul li.global-navi-item-active a div.radius-underline:after {
+  background-color: #1d1d1d;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  width: auto;
 }
 /* end header */
   
@@ -148,6 +169,21 @@ footer {
     padding-bottom:200px;
 }
 
+.wrapperTitle{
+  text-align: center;
+  font-size:2em;
+  margin-top:5%;
+  width: auto;
+}
+.wrapperTitle span{
+  font-weight: bold;
+}
+
+.fadeInUp {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
 
 @media (max-width:768px) {
   /* start header */
@@ -185,7 +221,6 @@ footer {
     flex-direction: column; 
   }
   .global-navi ul li{
-    background-color: #1d1d1d;
     width:100%;
     font-size: 20px;
     min-height: 56px;
