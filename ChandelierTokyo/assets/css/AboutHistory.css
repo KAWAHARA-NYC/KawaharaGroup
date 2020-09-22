@@ -4,7 +4,7 @@
 }
 
 
-.introwrapper {
+.intro_wrapper {
   width:570px;
   margin: 0 auto;
   text-align:left;
@@ -14,12 +14,12 @@
   margin-bottom: 5%;
 }
 
-.Description {
+.description {
   width: 100%;
   margin:0 auto;
 }
 
-.ContentsWrapper {
+.contents_wrapper {
   display: flex;
   line-height: 1.5em;
   font-size: 16px;
@@ -27,26 +27,26 @@
   margin-bottom: 40px;
 }
 
-.SubContentsWrapper {
+.sub_contents_wrapper {
   margin: 0 20px;
 }
 
-.ImageWrapper {
+.image_wrapper {
   width: 100%;
   height:auto;
   margin-bottom: 20px;
 }
 
-.ImageWrapper img {
+.image_wrapper img {
   width: 100%;
   height:auto;
 }
 
-.SentenceWrapper {
+.sentence_wrapper {
   width: 100%;
 }
 
-.OneContentsWrapper {
+.one_contents_wrapper {
   display: block;
   margin:0 auto;
 }
@@ -57,19 +57,19 @@ h4 {
   margin-bottom: 15px;
   text-align: center;
 }
-.imgDescription p {
+.img_description p {
   text-align: left;
 
 }
 
 @media (max-width:768px) {
-  .imagelinkgadget {
+  .image_linkgadget {
     flex-direction: column;
   }
-  .imagelinkgadget:nth-child(even) {
+  .image_linkGadget:nth-child(even) {
     flex-direction: column;
   }
-  .imgContentWrapper {
+  .img_content_wrapper {
     text-align: center;
     width: 80%;
     margin:0 auto;
@@ -77,16 +77,16 @@ h4 {
   h4 {
     text-align: center;
   }
-  .imgDescription p {
+  .img_description p {
     text-align: left;
   }
-  .imgImageWrapper {
+  .img_image_wrapper {
     width:100%;
     margin-left: 0;
     margin-bottom: 20px;
     text-align: center;
   }
-  .imgImageWrapper img {
+  .img_image_wrapper img {
     width:100%;
     height:auto;
   }

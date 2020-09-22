@@ -5,7 +5,7 @@
   min-height: 100vh;
   padding-bottom:200px;
 }
-.wrapperTitle{
+.wrapper_title{
   margin-bottom: 3%;
 }
   
@@ -23,14 +23,14 @@ h4 {
   font-size: 14px;
   padding-left:8px;
 }
-.errMsg {
+.err_msg {
   color:red;
   padding-top:6px;
   padding-left:4px;
   font-weight: 700;
   font-size: 18px;
 }
-.contact-form {
+.contact_form {
   margin:0 auto;
   padding:20px;
   width: 60%;
@@ -38,12 +38,12 @@ h4 {
   border-radius: 0.4em;
 }
 
-.contact-formGroup {
+.contact_form_group {
   margin:0 auto;
   margin-bottom:30px;
 }
 
-.contact-formGroup label {
+.contact_form_group label {
   display: block;
   font-size: 20px;
   font-weight: bold;
@@ -67,20 +67,20 @@ textarea {
   line-height: 1.2;
 }
 
-.radiogroup label {
+.radio_group label {
   display: block;
   margin: 5px 0;
   font-weight: normal;
   font-size: 16px;
 }
 
-.radiogroup input {
+.radio_group input {
   width: auto;
   margin-right:5px;
 }
 
 
-.contact-form__btn input {
+.contact_form__btn input {
   text-align: center;
   border: none;
   border-radius: 2rem;
@@ -91,7 +91,7 @@ textarea {
 }
 
 
-.introwrapper {
+.intro_wrapper {
   width:570px;
   margin: 0 auto;
   text-align:left;
@@ -100,7 +100,7 @@ textarea {
   margin-bottom: 5%;
 }
 
-.Description {
+.description {
   width: 80%;
   margin:0 auto;
 }

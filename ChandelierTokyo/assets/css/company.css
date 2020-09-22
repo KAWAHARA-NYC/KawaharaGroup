@@ -2,7 +2,7 @@
   flex: 1;
   padding-top: 140px;
 }
-.wrapperTitle{
+.wrapper_title{
   margin-bottom: 3%;
 }
 
@@ -34,7 +34,7 @@ h4 {
   text-align: left;
 }
 
-.accesswrapper {
+.access_wrapper {
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -43,23 +43,23 @@ h4 {
   padding-bottom: 100px;
 }
 
-.imgImageWrapper {
+.img_image_wrapper {
   margin-top:60px;
   width: 60%;
 }
-.imgImageWrapper img {
+.img_image_wrapper img {
   width:100%;
   height:auto;
   margin: 0 auto;
 }
 
-.accesswrapper ul {
+.access_wrapper ul {
   padding-top: 20px;
   padding-bottom: 40px;
   font-size: 18px;
 }
 
-.mapwrapper {
+.map_wrapper {
   position: relative;
   width: 600px;
   height: 450px;
@@ -71,7 +71,7 @@ h4 {
   border:2px solid #ccc; 
 }
 
-.mapwrapper iframe {
+.map_wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,13 +84,13 @@ h4 {
 
 
 @media (max-width:768px) {
-  .imagelinkgadget {
+  .image_link_gadget {
     flex-direction: column;
   }
-  .imagelinkgadget:nth-child(even) {
+  .image_link_gadget:nth-child(even) {
     flex-direction: column;
   }
-  .imgContentWrapper {
+  .img_content_wrapper {
     text-align: center;
     width: 80%;
     margin:0 auto;
@@ -98,10 +98,10 @@ h4 {
   h4 {
     text-align: center;
   }
-  .imgDescription p {
+  .img_description p {
     text-align: left;
   }
-  .imgImageWrapper {
+  .img_image_wrapper {
     width: 80%;
     margin-bottom: 20px;
   }
@@ -125,7 +125,7 @@ h4 {
     padding: 10px 25px;
   }
 
-  .mapwrapper {
+  .map_wrapper {
     width: 80%;
     height: 80%;
     padding: calc(450 / 650 * 100%) 0 0;

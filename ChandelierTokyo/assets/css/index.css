@@ -45,7 +45,7 @@ header {
   text-shadow:0 0 10px white;
 }
 
-.homeLogoWrapper{
+.home_logo_wrapper{
   position: absolute;
   width: auto;
   background-image: url("../img/top/logoBackBular.png");
@@ -66,30 +66,30 @@ header {
   width: 100%;
 }
 
-.homeLogoWrapper .japanesename{
+.home_logo_wrapper .japaneseName{
   height: auto;
   font-size: 3.25vw;
 }
 
-.homeLogoWrapper .englishname {
+.home_logo_wrapper .englishName {
   margin-top: 1%;
   font-size: 2.25vw;
 }
 
 
-.global-navi {
+.global_navi {
   position: absolute;
   bottom: 0px;
 }
 
-.global-navi ul li{
+.global_navi ul li{
   box-shadow: #1d1d1d;
   width:25%;
   background-color: rgba(255, 255, 255, 0.3); 
   text-shadow:0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.global-navi a {
+.global_navi a {
   color: rgba(255, 255, 255, 1);
   font-size: 20px;
   text-decoration: none;
@@ -116,7 +116,7 @@ header {
 
 }
 
-.maingadget {
+.main_gadget {
   justify-content: center;
   padding: 0px;
   width:100vw;
@@ -124,7 +124,7 @@ header {
   
 }
 
-.mainImageWrapper {
+.main_image_Wrapper {
   width: 100%;
   height: 100%;
   margin: 0%;
@@ -135,36 +135,36 @@ header {
 
 
 @media (max-width:768px) {
-  .maingadget {
+  .main_gadget {
     width:100%;
     margin: 0 auto;
     margin-bottom: 3%;
   }
-  .mainImageWrapper {
+  .main_image_wrapper {
     width:100%;
     margin:0 auto;
   }
-  .introwrapper {
+  .intro_wrapper {
     width: 400px;
     margin: 0 auto;
     text-align:left;
     font-size: 16px;
     margin-bottom: 10%;
   }
-  .imgImageWrapper {
+  .img_image_wrapper {
     width:90%;
   }
-  .imgImageWrapper img {
+  .img_image_wrapper img {
     width:100%;
     height:auto;
   }
 
   /* start header */
-  .japanesename {
+  .japaneseName {
     top:83%
   }
 
-  .global-navi {
+  .global_navi {
     position: static;
   }
   /* end header */

@@ -25,19 +25,19 @@
   margin-bottom: 5%;
 }
 
-.introwrapper {
+.intro_wrapper {
   width:570px;
   margin: 0 auto;
   text-align:left;
   font-size: 15px;
 }
 
-.Description {
+.description {
   width: 80%;
   margin:0 auto;
 }
 
-.contentsgroup {
+.contents_group {
   margin-top:40px;
   margin-bottom:40px;
 }
@@ -49,26 +49,26 @@ h4 {
   text-align: center;
 }
 
-.imgcontents{
+.img_contents{
 	display: flex;
   flex-wrap:wrap;
   justify-content: center;
   margin-left: 150px;
   margin-right: 150px;
 }
-.imgcontents li {
+.img_contents li {
   display: flex;
 	width: 20%;/*←画像を横に4つ並べる場合*/
   margin: 10px;
   box-sizing:border-box;
 }
 
-.imgcontents li img {
+.img_contents li img {
 	max-width:90%; /*画像のはみだしを防ぐ*/
 	height: auto; /*画像の縦横比を維持 */
 }
 
-.imgcontents li a {
+.img_contents li a {
   margin: auto auto;
   justify-content: center;
   text-align: center;
@@ -77,18 +77,18 @@ h4 {
 
 @media (max-width:768px) {
 
-  .introwrapper {
+  .intro_wrapper {
     width:400px;
     margin: 0 auto;
     text-align:left;
     font-size: 15px;
   }
 
-  .imgcontents{
+  .img_contents{
     margin-left: 10px;
     margin-right: 10px;
   }
-  .imgcontents li {
+  .img_contents li {
     width: 40%;
   }
 

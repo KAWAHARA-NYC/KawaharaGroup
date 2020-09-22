@@ -25,7 +25,7 @@ header {
     text-align: center;
 }
 
-.englishname {
+.englishName {
     width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
     height: 40px;
     margin:0;
@@ -35,7 +35,7 @@ header {
     position: static;
 }
 
-.japanesename {
+.japaneseName {
     width: 300px; 
     height: 30px;
     margin:0;
@@ -44,7 +44,7 @@ header {
     position: static;
 }
 
-.contactbtn {
+.contact_btn {
     font-size:36px;
     color: black;
     font-weight: bold;
@@ -55,7 +55,7 @@ header {
 .tel {
     font-size:22px;
 }
-.Linkpath {
+.link_path {
     text-align: center;
     margin: 0 auto;
     position: absolute;
@@ -68,18 +68,18 @@ header {
     -ms-transform: translate(-50%, -50%);
 }
 
-.global-navi {
+.global_navi {
     width: 100%;
     margin: auto;
     padding: 0px;
     border-bottom: 1px solid #1d1d1d;
 }
-.global-navi ul{
+.global_navi ul{
     margin:0 auto;
     list-style:none;
     display:flex;
 }
-.global-navi ul li{
+.global_navi ul li{
     display: flex;
     opacity: 1;
     text-align:center;
@@ -90,11 +90,11 @@ header {
     color:#7e7e7e;
 }
 
-.global-navi ul li:hover {
+.global_navi ul li:hover {
     background-color: white;
     color: #1d1d1d;
 }
-.global-navi a {
+.global_navi a {
     color:#a7a7a7;
     font-size: 20px;
     text-decoration: none;
@@ -105,25 +105,25 @@ header {
     padding-top: 15px;
     padding-bottom: 15px;
 }
-.global-navi a:hover {
+.global_navi a:hover {
     color: black
 }
-.global-navi a:active {
+.global_navi a:active {
     color: black;
 }
 
-.global-navi ul li.global-navi-item-active a{
+.global_navi ul li.global_navi-item-active a{
   color: #1d1d1d;
 }
 
-.global-navi ul li.global-navi-item-active a div.radius-underline div{
+.global_navi ul li.global_navi-item-active a div.radius-underline div{
   padding-bottom: 3%;
   padding-right: 0.5%;
   padding-left: 0.5%;
   width: 12rem;
 }
 
-.global-navi ul li.global-navi-item-active a div.radius-underline:after {
+.global_navi ul li.global_navi-item-active a div.radius-underline:after {
   background-color: #1d1d1d;
   border-radius: 2px;
   content: "";
@@ -169,13 +169,13 @@ footer {
     padding-bottom:200px;
 }
 
-.wrapperTitle{
+.wrapper_title{
   text-align: center;
   font-size:2em;
   margin-top:5%;
   width: auto;
 }
-.wrapperTitle span{
+.wrapper_title span{
   font-weight: bold;
 }
 
@@ -187,18 +187,18 @@ footer {
 
 @media (max-width:768px) {
   /* start header */
-  .englishname {
+  .englishName {
     width: 250px; 
     height: 35px;
     font-size:34px;
   }
-  .japanesename {
+  .japaneseName {
     width: 250px; 
     height: 20px;
     font-size:15px;
     letter-spacing: 7px;
   }
-  .contactbtn i{
+  .contact_btn i{
     font-size: 24px;
     top: 15px;
     right: 20px;
@@ -206,7 +206,7 @@ footer {
   .tel {
     font-size:14px;
   }
-  .Linkpath {
+  .link_path {
     text-align: center;
     margin: 0 auto;
     position: static;
@@ -217,15 +217,15 @@ footer {
     -webkit-transform: translate(0%, 0%);
     -ms-transform: translate(0%, 0%);
   }
-  .global-navi ul{
+  .global_navi ul{
     flex-direction: column; 
   }
-  .global-navi ul li{
+  .global_navi ul li{
     width:100%;
     font-size: 20px;
     min-height: 56px;
   }
-  .global-navi ul li a{
+  .global_navi ul li a{
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
