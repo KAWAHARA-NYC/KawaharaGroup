@@ -47,12 +47,12 @@
                 <div class="contact_form_group">
                     <label>お名前<span class="required">*</span></label>
                     <input type="text" v-model="userName">
-                    <p class="errMsg">{{ err_userName }}</p>
+                    <p class="err_msg">{{ err_userName }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>メールアドレス<span class="required">*</span></label>
                     <input type="email" v-model="email">
-                    <p class="errMsg">{{ err_email }}</p>
+                    <p class="err_msg">{{ err_email }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>電話番号</label>
@@ -61,7 +61,7 @@
                 <div class="contact_form_group">
                     <label>お住まい<span class="required">*</span></label>
                     <input type="text" v-model="address">
-                    <p class="errMsg">{{ err_address }}</p>
+                    <p class="err_msg">{{ err_address }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>個人/法人<span class="required">*</span></label>
@@ -69,7 +69,7 @@
                         <label><input type="radio" value="個人" v-model="userType">個人</label>
                         <label><input type="radio" value="法人" v-model="userType">法人</label>
                     </div>
-                    <p class="errMsg">{{ err_userType }}</p>
+                    <p class="err_msg">{{ err_userType }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>お問合せ内容<span class="required">*</span></label>
@@ -83,9 +83,9 @@
                         <label class="toiawaseetc"><input type="radio" value="__other_option__" v-model="contactType"
                                 onClick="changeDisabled()" name="contactType">その他
                     </div>
-                    <p class="errMsg">{{ err_contactType }}</p>
+                    <p class="err_msg">{{ err_contactType }}</p>
                     <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
-                    <p class="errMsg">{{ err_contactTypeEtc }}</p>
+                    <p class="err_msg">{{ err_contactTypeEtc }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>自由入力欄</label>
