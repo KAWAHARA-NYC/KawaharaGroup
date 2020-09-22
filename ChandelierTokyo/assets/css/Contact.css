@@ -23,6 +23,13 @@ h4 {
   font-size: 14px;
   padding-left:8px;
 }
+.errMsg {
+  color:red;
+  padding-top:6px;
+  padding-left:4px;
+  font-weight: 700;
+  font-size: 18px;
+}
 .contact-form {
   margin:0 auto;
   padding:20px;

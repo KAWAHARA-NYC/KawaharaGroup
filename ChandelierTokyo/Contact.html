@@ -28,45 +28,54 @@
         </div>
         <div class="global-navi">
             <ul class="menu">
-                <li><a href="AboutHistory.html">シャンデリア東京<br>About Us</a></li>
-                <li><a href="AboutChandelier.html">作品について<br>Chandelier</a></li>
+                <li><a href="aboutHistory.html">シャンデリア東京<br>About Us</a></li>
+                <li><a href="aboutChandelier.html">作品について<br>Chandelier</a></li>
                 <li><a href="company.html">事業内容<br>Company</a></li>
-                <li class="global-navi-item-active"><a href="Contact.html"><div class="radius-underline"><div>お問い合わせ<br>Contact</div></div></a></li>
+                <li class="global-navi-item-active"><a href="contact.html">
+                        <div class="radius-underline">
+                            <div>お問い合わせ<br>Contact</div>
+                        </div>
+                    </a></li>
             </ul>
         </div>
     </header>
     <div class="wrapper">
         <p class="wrapperTitle"><span>お問合せ</span></p>
         <div class="p-formArea" id="postForm">
-            <form class="contact-form" name="Form1" v-on:submit.prevent="submit" v-if="showForm">
+            <form class="contact-form" name="Form1" v-on:submit.prevent="submit" v-if="showForm" novalidate="true">
+
                 <div class="contact-formGroup">
                     <label>お名前<span class="required">*</span></label>
-                    <input type="text" v-model="userName" required>
+                    <input type="text" v-model="userName">
+                    <p class="errMsg">{{ err_userName }}</p>
                 </div>
                 <div class="contact-formGroup">
                     <label>メールアドレス<span class="required">*</span></label>
-                    <input type="email" v-model="email" required>
+                    <input type="email" v-model="email">
+                    <p class="errMsg">{{ err_email }}</p>
                 </div>
                 <div class="contact-formGroup">
                     <label>電話番号</label>
-                    <input type="tel" v-model="tel" required>
+                    <input type="tel" v-model="tel">
                 </div>
                 <div class="contact-formGroup">
                     <label>お住まい<span class="required">*</span></label>
-                    <input type="text" v-model="address" required>
+                    <input type="text" v-model="address">
+                    <p class="errMsg">{{ err_address }}</p>
                 </div>
                 <div class="contact-formGroup">
-                    <label>個人/法人区分<span class="required">*</span></label>
+                    <label>個人/法人<span class="required">*</span></label>
                     <div class="radiogroup">
-                        <label><input type="radio" value="個人" v-model="userType" required>個人</label>
+                        <label><input type="radio" value="個人" v-model="userType">個人</label>
                         <label><input type="radio" value="法人" v-model="userType">法人</label>
                     </div>
+                    <p class="errMsg">{{ err_userType }}</p>
                 </div>
                 <div class="contact-formGroup">
-                    <label>お問合せ種別<span class="required">*</span></label>
+                    <label>お問合せ内容<span class="required">*</span></label>
                     <div class="radiogroup">
                         <label><input type="radio" value="購入検討" v-model="contactType" onClick="changeDisabled()"
-                                name="contactType" required>購入検討</label>
+                                name="contactType">購入検討</label>
                         <label><input type="radio" value="話を聞きたい" v-model="contactType" onClick="changeDisabled()"
                                 name="contactType">話を聞きたい</label>
                         <label><input type="radio" value="見積もりをしたい" v-model="contactType" onClick="changeDisabled()"
@@ -74,10 +83,12 @@
                         <label class="toiawaseetc"><input type="radio" value="__other_option__" v-model="contactType"
                                 onClick="changeDisabled()" name="contactType">その他
                     </div>
+                    <p class="errMsg">{{ err_contactType }}</p>
                     <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
+                    <p class="errMsg">{{ err_contactTypeEtc }}</p>
                 </div>
                 <div class="contact-formGroup">
-                    <label>お問合せ内容</label>
+                    <label>自由入力欄</label>
                     <textarea id="content" v-model="content"></textarea>
                 </div>
                 <div class="contact-form__btn">
@@ -85,21 +96,21 @@
                 </div>
             </form>
             <div class="p-formSucess" v-else>
-                <div class="introwrapper fadeInUp">
+                <div class="introwrapper">
                     <div class="Description">
                         <p>お問合せありがとうございました。<BR>
                             入力されたアドレスに確認メールが自動配信されますので、<BR>
                             ご確認ください。
                         </p>
                         <BR>
-                        <div><a href="/">入力画面を表示</a></div>
+                        <div><a href="contact.html">入力画面を表示</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <footer>
             <ul class="foot">
-                <li><a href="Contact.html">お問い合わせ</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
                 <li><a href="company.html">企業概要・アクセス</a></li>
             </ul>
             <p>&copy;copy right 2020.kawahara</p>
