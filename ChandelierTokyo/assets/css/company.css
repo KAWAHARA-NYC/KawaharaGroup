@@ -1,35 +1,54 @@
-.wrapper {
-  flex: 1;
-  padding-top: 140px;
-}
-.wrapper_title{
-  margin-bottom: 3%;
-}
-
 h4 {
   width:100%;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
 }
   
 .outline {
-  margin: 60px;
+  margin-top: 60px;
+  margin-bottom:90px;
   margin-left:auto;
   margin-right:auto;
   font-size: 18px;
 }
 
 .outline th {
-  padding: 8px 25px;
+  padding: 14px 25px;
+  line-height: 1.8em;
   vertical-align: top;
   text-align: left;
 }
 
 .outline td {
+  padding: 14px 25px;
+  line-height: 1.8em;
+  vertical-align: top;
+  text-align: left;
+}
+
+.zigyo td {
   width: 600px;
-  padding: 8px 25px;
+
+}
+
+.station {
+  margin-bottom:30px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 18px;
+}
+
+.station th {
+  padding: 4px 8px;
+  vertical-align: top;
+  text-align: left;
+  font-weight: normal;
+}
+
+.station td {
+  padding: 4px 8px;
   vertical-align: top;
   text-align: left;
 }
@@ -39,7 +58,6 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 30px;
   padding-bottom: 100px;
 }
 

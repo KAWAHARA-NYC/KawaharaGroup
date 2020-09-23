@@ -162,10 +162,10 @@ footer {
 
 
 .wrapper {
-    padding-top:230px;
-    position:relative;
-    min-height: 100vh;
-    padding-bottom:200px;
+  padding-top:230px;
+  position:relative;
+  min-height: 100vh;
+  padding-bottom:200px;
 }
 
 .wrapper_title{
@@ -182,7 +182,6 @@ footer {
   width:570px;
   margin: 0 auto;
   text-align:left;
-  line-height: 1.5em;
   font-size: 16px;
   margin-bottom: 5%;
 }
@@ -193,7 +192,7 @@ footer {
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.8em;
   font-size: 16px;
 }
 
