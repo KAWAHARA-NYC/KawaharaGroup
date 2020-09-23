@@ -178,6 +178,25 @@ footer {
   font-weight: bold;
 }
 
+.intro_wrapper {
+  width:570px;
+  margin: 0 auto;
+  text-align:left;
+  line-height: 1.5em;
+  font-size: 16px;
+  margin-bottom: 5%;
+}
+
+.description {
+  width: 100%;
+  margin:0 auto;
+}
+
+p {
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
 .fadeInUp {
   opacity : 0;
   transform: translateY(20px);
