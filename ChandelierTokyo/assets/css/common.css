@@ -139,7 +139,7 @@ footer {
     width: 100%;
     font-size: 15px;
     text-align: center;
-    padding: 25px 0;
+    padding: 25px 0 10px;
     background-color: black;
     color: white;
     margin-top: 10%;
@@ -157,6 +157,11 @@ footer {
 }
 .foot a:active {
     color: white;
+}
+footer p {
+  font-size: 15px;
+  text-align:right;
+  padding-right: 10px;
 }
 /* end footer */
 
