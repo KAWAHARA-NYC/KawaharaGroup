@@ -55,8 +55,9 @@
                     <p class="err_msg">{{ err_email }}</p>
                 </div>
                 <div class="contact_form_group">
-                    <label>電話番号</label>
+                    <label>電話番号<span class="required">*</span></label>
                     <input type="tel" v-model="tel">
+                    <p class="err_msg">{{ err_tel }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>お住まい<span class="required">*</span></label>
@@ -85,7 +86,6 @@
                     </div>
                     <p class="err_msg">{{ err_contactType }}</p>
                     <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
-                    <p class="err_msg">{{ err_contactTypeEtc }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>自由入力欄</label>
@@ -103,7 +103,7 @@
                             ご確認ください。
                         </p>
                         <BR>
-                        <div><a href="contact.html">入力画面を表示</a></div>
+                        <div><a href="index.html">ホーム画面を表示</a></div>
                     </div>
                 </div>
             </div>

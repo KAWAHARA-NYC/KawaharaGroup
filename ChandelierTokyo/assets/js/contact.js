@@ -16,10 +16,10 @@ new Vue({
   data: {
     err_userName: "",
     err_email: "",
+    err_tel: "",
     err_address: "",
     err_userType: "",
     err_contactType: "",
-    err_contactTypeEtc: "",
     showForm: true,
     userName: "",
     email: "",
@@ -35,9 +35,11 @@ new Vue({
       if (this.userName &&
         this.email &&
         this.validEmail(this.email) &&
+        this.tel &&
+        this.validTel(this.tel) &&
         this.address &&
         this.userType &&
-        (this.contactType && (this.contactType != "__other_option__")) || ((this.contactType == "__other_option__") && this.contactTypeEtc)
+        this.contactType
       ) {
         const submitParams = new FormData();
         // お問い合わせ内容のname属性値
@@ -47,7 +49,15 @@ new Vue({
         submitParams.append("entry.180164622", this.address);
         submitParams.append("entry.1906762036", this.userType);
         submitParams.append("entry.1495106858", this.contactType);
-        submitParams.append("entry.1495106858.other_option_response", this.contactTypeEtc);
+        
+        if (this.contactType == "__other_option__") {
+          if (this.contactTypeEtc) {
+            submitParams.append("entry.1495106858.other_option_response", this.contactTypeEtc);
+          }
+          if (!this.contactTypeEtc) {
+            submitParams.append("entry.1495106858.other_option_response", "その他");
+          }
+        }
         submitParams.append("entry.258805767", this.content);
 
         // CORSエラー対策
@@ -67,10 +77,10 @@ new Vue({
       } else {
         this.err_userName = "";
         this.err_email = "";
+        this.err_tel = "";
         this.err_address = "";
         this.err_userType = "";
         this.err_contactType = "";
-        this.err_contactTypeEtc = "";
 
         if (!this.userName) {
           this.err_userName = 'お名前を入力してください。';
@@ -80,6 +90,11 @@ new Vue({
         } else if (!this.validEmail(this.email)) {
           this.err_email = 'メールアドレスの形式で入力してください。';
         }
+        if (!this.tel) {
+          this.err_tel = '電話番号を入力してください。';
+        } else if (!this.validTel(this.tel)) {
+          this.err_tel = '電話番号の形式で入力してください。';
+        }
         if (!this.address) {
           this.err_address = 'お住まいを入力してください。';
         }
@@ -88,10 +103,6 @@ new Vue({
         }
         if (!this.contactType) {
           this.err_contactType = 'お問い合わせ内容をお選びください。';
-        } else if (!(this.contactTypeEtc)) {
-          if (this.contactType == "__other_option__") {
-            this.err_contactTypeEtc = 'その他の内容を入力してください。';
-          }
         }
 
         e.preventDefault();
@@ -103,6 +114,10 @@ new Vue({
     validEmail: function (email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
+    },
+    validTel: function (tel) {
+      var re = /^[0-9]{3}-?[0-9]{3,4}-?[0-9]{3,4}$/;
+      return re.test(tel);
     }
     /*
     
