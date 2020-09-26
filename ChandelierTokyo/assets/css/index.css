@@ -97,7 +97,6 @@ header {
 .global_navi ul li{
   box-shadow: #1d1d1d;
   width:100%;
-
   text-shadow:0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -186,7 +185,6 @@ header {
   .main_gadget {
     width:100%;
     margin: 0 auto;
-    margin-bottom: 3%;
   }
   .main_image_wrapper {
     width:100%;

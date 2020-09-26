@@ -5,5 +5,7 @@ $('.slick01').slick({
     speed: 2500, //切り替えのスピード（小さくすると速くなる）
     autoplaySpeed: 2500, //自動再生のスピード
     fade: true, //フェードの有効化
+    pauseOnFocus: false,
+    pauseOnHover: false,
     arrows :false
 });

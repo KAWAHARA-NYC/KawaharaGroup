@@ -23,15 +23,16 @@
 .slide-arrow{
   position: absolute;
   font-size: 50px;
+  cursor:pointer;
 }
 .prev-arrow {
   left: -40px;
-  top: -300px;
+  top: 50%;
 	z-index: 90;
 }
 .next-arrow {
   right: -40px;
-  top: -300px;
+  top: 50%;
 	z-index: 90;
 }
 
