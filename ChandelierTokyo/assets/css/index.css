@@ -102,10 +102,6 @@ header {
 }
 
 .global_navi ul li a {
-  color:white;
-}
-
-.global_navi li a {
   color: white;
   font-size: 24px;
   text-decoration: none;
@@ -212,6 +208,11 @@ header {
     height: auto;
     font-size: 22px;
     width:300px;
+  }
+
+  .global_navi ul li a{
+    font-size: 18px;
+    padding: 20px 20px;
   }
 
   .sns_wrapper {
