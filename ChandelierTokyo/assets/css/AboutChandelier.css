@@ -55,30 +55,6 @@ h4 {
   text-align: center;
 }
 
-.img_contents{
-	display: flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  margin-left: 150px;
-  margin-right: 150px;
-}
-.img_contents li {
-  display: flex;
-	width: 20%;/*←画像を横に4つ並べる場合*/
-  margin: 10px;
-  box-sizing:border-box;
-}
-
-.img_contents li img {
-	max-width:90%; /*画像のはみだしを防ぐ*/
-	height: auto; /*画像の縦横比を維持 */
-}
-
-.img_contents li a {
-  margin: auto auto;
-  justify-content: center;
-  text-align: center;
-}
 
 .showroom_link {
   color: #0000EE;
@@ -90,21 +66,32 @@ h4 {
   text-decoration: underline;
 }
 
+@media (max-width: 1020px) {
+  .slide-arrow{
+    font-size: 40px;
+  }
+  .prev-arrow {
+    left: -20px;
+  }
+  .next-arrow {
+    right: -20px;
+  }
+  .all_image_wrapper {
+    margin:0 4%;
+  }
+}
+
 @media (max-width:768px) {
 
-  .intro_wrapper {
-    width:400px;
-    margin: 0 auto;
-    text-align:left;
-    font-size: 15px;
+  .slide-arrow{
+    font-size: 30px;
+  }
+  .prev-arrow {
+    left: 8px;
+  }
+  .next-arrow {
+    right: 8px;
   }
 
-  .img_contents{
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .img_contents li {
-    width: 40%;
-  }
 
 }

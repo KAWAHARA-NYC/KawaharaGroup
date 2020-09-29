@@ -56,26 +56,32 @@ h4 {
 }
 
 @media (max-width:768px) {
-  .img_content_wrapper {
-    text-align: center;
-    width: 80%;
-    margin:0 auto;
-  }
   h4 {
     text-align: center;
+    font-size: 1.4em;
   }
   .img_description p {
     text-align: left;
   }
-  .img_image_wrapper {
-    width:100%;
-    margin-left: 0;
-    margin-bottom: 20px;
-    text-align: center;
+
+  .sub_contents_wrapper {
+    flex-direction: column;
   }
-  .img_image_wrapper img {
-    width:100%;
-    height:auto;
+  
+  .sub_contents_wrapper:nth-of-type(4) {
+    flex-direction: column;
   }
+  
+  .image_wrapper {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 30px;
+  }
+  
+  .sentence_wrapper {
+    width: 100%;
+  }
+
 
 }

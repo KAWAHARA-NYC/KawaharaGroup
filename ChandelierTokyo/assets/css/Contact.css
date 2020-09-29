@@ -24,10 +24,16 @@ h4 {
   font-weight: 700;
   font-size: 18px;
 }
+
+.p_formArea {
+  max-width:650px;
+  margin: 0 auto;
+}
+
 .contact_form {
   margin:0 auto;
   padding:20px;
-  width: 60%;
+  width: 100%;
   border: 1px solid gray;
   border-radius: 0.4em;
 }
@@ -100,5 +106,7 @@ textarea {
 
 
 @media (max-width:768px) {
-
+  .p_formArea {
+    margin: 0 8%;
+  }
 }

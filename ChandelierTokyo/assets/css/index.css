@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0px;
-  background-color: rgba(0, 0, 0, 0.979);
+  /*background-color: rgba(0, 0, 0, 0.979); */
   color: #242424;
   flex-flow: column;
   min-height: 100vh;
@@ -46,6 +46,7 @@ header {
 }
 
 .home_logo_wrapper{
+  z-index: 90;
   position: absolute;
   width: auto;
   background-image: url("../img/top/logoBackBular.png");
@@ -77,6 +78,7 @@ header {
 }
 
 .global_navi_wrapper {
+  z-index: 99;
   position: absolute;
   height: 100vh;
   width:auto;
@@ -178,8 +180,11 @@ header {
   position: relative;
 }
 
-
-
+@media (max-width: 1020px) {
+  .global_navi_wrapper.is-hidden {
+    width:auto;
+  }
+}
 
 @media (max-width:768px) {
   .main_gadget {
@@ -190,29 +195,49 @@ header {
     width:100%;
     margin:0 auto;
   }
-  .intro_wrapper {
-    width: 400px;
-    margin: 0 auto;
-    text-align:left;
-    font-size: 16px;
-    margin-bottom: 10%;
-  }
-  .img_image_wrapper {
-    width:90%;
-  }
-  .img_image_wrapper img {
-    width:100%;
-    height:auto;
+  .global_navi_wrapper {
+    background-color: rgba(255, 255, 255, 0.7);
   }
 
   /* start header */
-  .japaneseName {
-    top:83%
+
+  .home_logo_wrapper .japaneseName{
+    height: auto;
+    font-size: 26px;
+    width:300px;
   }
+
+  .home_logo_wrapper .englishName{
+    height: auto;
+    font-size: 22px;
+    width:300px;
+  }
+
 
   .global_navi {
     position: static;
   }
+
+  .global_navi ul li a {
+    color: #1d1d1d;
+    font-size: 16px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  .sns_wrapper {
+    margin:0 auto;
+    flex-direction: column; 
+  }
+
+  .sns_wrapper a{
+    margin:10px auto;
+  }
+
   /* end header */
 
   .slick-dots {
