@@ -258,12 +258,18 @@ p {
 
 .nav_toggle.show i:nth-child(1) {
   transform: translateY(10px) rotate(-45deg);
+  -webkit-transform: translateY(10px) rotate(-45deg);
+  -ms-transform: translateY(10px) rotate(-45deg);
+  -moz-transform: translateY(10px) rotate(-45deg);
 }
 .nav_toggle.show i:nth-child(2) {
   opacity: 0;
 }
 .nav_toggle.show i:nth-child(3) {
   transform: translateY(-12px) rotate(45deg);
+  -webkit-transform: translateY(-12px) rotate(45deg);
+  -ms-transform: translateY(-12px) rotate(45deg);
+  -moz-transform: translateY(-12px) rotate(45deg);
 }
 
 

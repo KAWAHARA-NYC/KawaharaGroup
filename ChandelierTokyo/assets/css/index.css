@@ -14,12 +14,6 @@ body {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica",YuGothic,"Yu Gothic";
 }
 
-.fadeInUp {
-  opacity : 0;
-  transform: translateY(20px);
-  transition: 1s;
-}
-
 /* Slick */
 .slick-dotted.slick-slider {
   margin-bottom: 0px;
