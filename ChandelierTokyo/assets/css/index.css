@@ -182,11 +182,7 @@ header {
   position: relative;
 }
 
-@media (max-width: 1020px) {
-
-}
-
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
   .main_gadget {
     width:100%;
     margin: 0 auto;
@@ -210,24 +206,82 @@ header {
     width:300px;
   }
 
-  .global_navi ul li a{
-    font-size: 18px;
-    padding: 20px 20px;
-  }
-
   .sns_wrapper {
     margin:0 auto;
-    flex-direction: column; 
-  }
-
-  .sns_wrapper a{
-    margin:10px auto;
   }
 
   /* end header */
 
   .slick-dots {
     bottom: 20px;
+  }
+
+}
+
+
+@media (orientation: landscape) and (max-width: 830px){
+
+  .global_navi_wrapper {
+    width:100vw;
+  }
+
+  .global_navi_wrapper.is-hidden {
+    width:100vw;
+  }
+
+  .global_navi {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .global_navi ul{
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+  .global_navi ul li{
+    width:50%;
+  }
+  .global_navi ul li a{
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+
+  .sns_wrapper a{
+    margin:10px 14px;
+  }
+
+}
+
+@media screen and (max-width: 480px) { 
+
+  .global_navi {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .global_navi ul li a{
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+
+  .sns_wrapper {
+    margin:0 auto;
+    flex-direction: column; 
+  }
+  .sns_wrapper a{
+    margin:10px auto;
+  }
+
+  .sns_wrapper i{
+    font-size:24px;
+    padding:8px;
+  }
+  .fa-instagram {
+    width:40px;
+    text-align:center;
   }
 
 }

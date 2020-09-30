@@ -297,7 +297,7 @@ p {
   background-color:#315096;
 }
 
-@media (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   .wrapper {
     padding-top:100px;
   }
@@ -392,7 +392,7 @@ p {
 
 }
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
   /* start header */
   .englishName {
     width: 250px; 
@@ -424,9 +424,97 @@ p {
     -ms-transform: translate(0%, 0%);
   }
 
+
+  /* end header */
+
+  .wrapper_title{
+    text-align: center;
+    font-size:1.5em;
+    margin-bottom: 3%;
+    width: auto;
+  }
+
+  .intro_wrapper {
+    padding:0 8%;
+    margin:0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 820px){
+
+  .englishName {
+    width: 250px; 
+    margin-bottom: 0px;
+    font-size:28px;
+  }
+  .japaneseName {
+    width: 250px; 
+    font-size:15px;
+    letter-spacing: 7px;
+  }
+
+  .global_navi_wrapper {
+    width:100vw;
+  }
+
+  .global_navi_wrapper.is-hidden {
+    width:100vw;
+  }
+
+  .global_navi {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .global_navi ul{
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+  .global_navi ul li{
+    width:50%;
+  }
   .global_navi ul li a{
-    font-size: 18px;
-    padding: 20px 20px;
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+
+  .sns_wrapper a{
+    margin:10px 14px;
+  }
+
+  footer p {
+    text-align:center;
+  }
+
+  .wrapper_title{
+    text-align: center;
+    font-size:1.5em;
+    margin-bottom: 3%;
+    width: auto;
+  }
+
+  .intro_wrapper {
+    padding:0 8%;
+    margin:0 auto;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media screen and (max-width: 480px) { 
+
+  .global_navi {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+
+  .global_navi ul li a{
+    font-size: 16px;
+    padding: 10px 10px;
   }
 
   .sns_wrapper {
@@ -438,16 +526,29 @@ p {
     margin:10px auto;
   }
 
-  /* end header */
+  .sns_wrapper i{
+    font-size:24px;
+    padding:8px;
+  }
+  .fa-instagram {
+    width:40px;
+    text-align:center;
+  }
+
+  p {
+    line-height: 1.6em;
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+    text-align:center;
+    padding-right: 10px;
+  }
 
   .wrapper_title{
     text-align: center;
-    font-size:1.5em;
-    margin-bottom: 3%;
-    width: auto;
+    font-size:1.2em;
   }
-  .intro_wrapper {
-    margin:0 8%;
-    margin-bottom: 50px;
-  }
+
 }

@@ -105,8 +105,29 @@ textarea {
 }
 
 
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
   .p_formArea {
     margin: 0 8%;
+  }
+}
+
+@media screen and (max-width: 480px) { 
+
+  .p_formArea {
+    margin: 0 4%;
+  }
+
+  .contact_form_group label {
+    font-size: 1em;
+  }
+
+  .radio_group label {
+    font-size: 0.9em;
+  }
+
+  .err_msg {
+    padding-left:0px;
+    font-weight: 700;
+    font-size: 0.9em;
   }
 }
