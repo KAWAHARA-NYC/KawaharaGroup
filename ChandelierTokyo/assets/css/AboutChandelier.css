@@ -1,51 +1,53 @@
-/* slider */
-
-.slider img {
-	width: 100%;
-	height: auto;
+/*Lightbox */
+.lb-cancel {
+  background: url(../js/plugin/lightbox/images/loading.gif) no-repeat;
 }
-
-.thumb-item {
-	max-width: 850px;
-	margin: 0 auto 5px;
-	padding: 0 5px;
+.lb-nav a.lb-prev { 
+  width: 50%;
+  background: url(../js/plugin/lightbox/images/prev.png) left 48% no-repeat;
 }
-.thumb-item-nav {
-	max-width: 850px;
-	margin: 0 auto;
-	cursor:pointer;
+.lb-nav a.lb-next { 
+  width: 50%;
+  background: url(../js/plugin/lightbox/images/next.png) right 48% no-repeat;
 }
-.thumb-item-nav li{
-	margin: 3px;
+.lb-data .lb-close {
+  background: url(../js/plugin/lightbox/images/close.png) top right no-repeat;
 }
-
-/*左右の矢印の位置*/
-.slide-arrow{
-  position: absolute;
-  font-size: 50px;
-  cursor:pointer;
-}
-.prev-arrow {
-  left: -40px;
-  top: 50%;
-	z-index: 90;
-}
-.next-arrow {
-  right: -40px;
-  top: 50%;
-	z-index: 90;
-}
-
-/*左右の矢印の色*/
-.slick-prev:before,
-.slick-next:before {
-	color: #000;
-}
-
-/* slider */
+/*Lightbox */
 
 .contents_group {
   margin-bottom:40px;
+}
+
+.img_contents{
+	display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+.img_contents li {
+  display: flex;
+	width: 20%;/*←画像を横に4つ並べる場合*/
+  margin: 10px;
+  border-radius: 8px;
+  box-sizing:border-box;
+  display: block;
+  box-shadow: 0 5px 10px #666666;
+}
+
+.img_contents li img {
+  display: block;
+  border-radius: 8px;
+	max-width:100%; /*画像のはみだしを防ぐ*/
+  height: auto; /*画像の縦横比を維持 */
+  
+}
+
+.img_contents li a {
+  margin: auto auto;
+  justify-content: center;
+  text-align: center;
 }
 
 h4 {
@@ -79,6 +81,14 @@ h4 {
   .all_image_wrapper {
     margin:0 4%;
   }
+  .img_contents{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
 }
 
 @media screen and (max-width:768px) {
@@ -91,6 +101,14 @@ h4 {
   }
   .next-arrow {
     right: 8px;
+  }
+
+  .img_contents{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .img_contents li {
+    width: 40%;
   }
 
 }

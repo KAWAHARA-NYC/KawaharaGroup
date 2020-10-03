@@ -162,7 +162,6 @@ header {
 
 .fa-facebook-f {
   width:30px;
-
 }
 .snstext{
   color:black;
@@ -178,6 +177,7 @@ header {
 
 .copyright_wrapper p{
   font-size: 12px;
+  background-color: transparent;;
 }
 
 .nav_toggle .fa-bars {
