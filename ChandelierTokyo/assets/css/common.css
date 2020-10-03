@@ -22,32 +22,19 @@ header {
   height: auto;
   width: 100%;
   background-color : white; 
-  padding-bottom: 4px;
+  border-bottom: none ;
+  padding-bottom: 2px;
 }
 .logo {
-  color: black;
-  font-weight: bold;
-  text-align: center;
+  width: 100%;
+  margin : 0 auto;
 }
 
-.englishName {
-  width: 300px; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+.logo_wrapper img{
+  width: 300px;
   height: auto;
-  margin:0;
-  margin-bottom: 5px;
-  font-size:40px;
-  font-family: 'Dancing Script', cursive;
-  position: static;
 }
 
-.japaneseName {
-  width: 300px; 
-  height: auto;
-  margin:0;
-  font-size:20px;
-  letter-spacing: 10px;
-  position: static;
-}
 
 .contact_btn {
   font-size:36px;
@@ -267,36 +254,33 @@ p {
 .sns_wrapper {
   margin:0 auto;
   display:none;
-  justify-content: center;
 }
 
 .sns_wrapper a{
-  margin:0 8px;
+
 }
 
 .sns_wrapper i{
-  font-size:24px;
+  font-size:16px;
   padding:8px;
-  color: white;
   border-radius: 10px;
 }
 .fa-instagram {
-  background-color:#e1306c;
-  width:40px;
-  text-align:center;
 }
 
 .fa-twitter {
-  background-color:#55acee;
 }
 
 .fa-facebook {
-  background-color:#315096;
 }
 
 @media screen and (max-width: 1024px) {
   .wrapper {
     padding-top:100px;
+  }
+
+  .logo_wrapper {
+    border-bottom: solid 1px gray ;
   }
 
   .global_navi_wrapper {
@@ -391,15 +375,14 @@ p {
 
 @media screen and (max-width:768px) {
   /* start header */
-  .englishName {
-    width: 250px; 
-    margin-bottom: 0px;
-    font-size:28px;
+
+  .logo_wrapper {
+    border-bottom: solid 1px gray ;
   }
-  .japaneseName {
-    width: 250px; 
-    font-size:15px;
-    letter-spacing: 7px;
+
+  .logo_wrapper img{
+    width: 250px;
+    height: auto;
   }
   .contact_btn i{
     font-size: 24px;
@@ -440,15 +423,9 @@ p {
 
 @media (orientation: landscape) and (max-width: 820px){
 
-  .englishName {
-    width: 250px; 
-    margin-bottom: 0px;
-    font-size:28px;
-  }
-  .japaneseName {
-    width: 250px; 
-    font-size:15px;
-    letter-spacing: 7px;
+  .logo_wrapper img{
+    width: 250px;
+    height: auto;
   }
 
   .global_navi_wrapper {
@@ -479,7 +456,6 @@ p {
   }
 
   .sns_wrapper a{
-    margin:10px 14px;
   }
 
   footer p {
@@ -520,16 +496,12 @@ p {
   }
 
   .sns_wrapper a{
-    margin: 6px auto;
+
   }
 
   .sns_wrapper i{
-    font-size:22px;
-    padding:8px;
   }
   .fa-instagram {
-    width:38px;
-    text-align:center;
   }
 
   p {

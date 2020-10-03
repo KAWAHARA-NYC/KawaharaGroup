@@ -24,6 +24,12 @@ body {
   object-fit:cover;
   object-position:50% 100%;
 }
+.test_img {
+  width: 100vw;
+  height: 100vh;
+  object-fit:cover;
+  object-position:50% 100%;
+}
  
 /* Slick */
 
@@ -47,7 +53,7 @@ header {
   background-size:100% 100%;
   margin-top:37vh;
   top: 50%;
-  left: 50%;
+  left:50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -59,11 +65,19 @@ header {
   font-weight: bold;
   text-align: center;
   width: 100%;
+  margin : 0 auto;
 }
 
 .home_logo_wrapper .japaneseName{
   height: auto;
-  font-size: 3.25vw;
+  width: 2.25vw;
+  margin : 0 auto;
+}
+.home_logo_wrapper img{
+  text-align:center;
+  border: none;
+  width: 30vw;
+  height: auto;
 }
 
 .home_logo_wrapper .englishName {
@@ -78,7 +92,7 @@ header {
   width:auto;
   top: 0px;
   right: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .global_navi {
@@ -95,45 +109,63 @@ header {
   width:100%;
 }
 
+.global_navi ul li:hover {
+  background-color: #adadad;
+  color: #dbdbdb;
+}
+.global_navi ul li a:hover {
+  color: #dbdbdb;
+}
+.global_navi ul li a:active {
+  color: #dbdbdb;
+}
+
 .global_navi ul li a {
-  color: white;
-  font-size: 24px;
+  color: black;
+  font-size: 20px;
   text-decoration: none;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  text-align:left;
   display: flex;
   width: 100%;
-  padding: 20px 25px;
+  padding: 15px 20px;
 }
 
 .sns_wrapper {
   margin:0 auto;
+  margin-bottom: 20px;
   display:flex;
-  justify-content: center;
+  flex-direction: column; 
 }
 
 .sns_wrapper a{
-  margin:0 8px;
+  width:100%;
+  text-align:left;
 }
 
 .sns_wrapper i{
-  font-size:24px;
-  padding:8px;
-  color: white;
+  font-size:16px;
+  color: #8f8f8f;
   border-radius: 10px;
+  text-align:left;
 }
 .fa-instagram {
-  background-color:#e1306c;
-  width:40px;
+  width:30px;
   text-align:center;
+  font-weight: 800;
 }
 
 .fa-twitter {
-  background-color:#55acee;
+  width:30px;
 }
 
-.fa-facebook {
-  background-color:#315096;
+.fa-facebook-f {
+  width:30px;
+
+}
+.snstext{
+  color:black;
 }
 
 .copyright_wrapper {
@@ -141,11 +173,22 @@ header {
   position: absolute;
   bottom: 10px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .copyright_wrapper p{
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.nav_toggle .fa-bars {
+  display: block;
+  color: white;
+}
+
+.nav_toggle.show .fa-times {
+  display: block;
+  color: black;
+  z-index: 100;
 }
 
 /* end header */
@@ -176,6 +219,24 @@ header {
   position: relative;
 }
 
+.sentence_wrapper {
+  position: absolute;
+  width:100%;
+  color: white;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sentence_wrapper p {
+  width:100%;
+}
+
 @media screen and (max-width:768px) {
   .main_gadget {
     width:100%;
@@ -187,6 +248,10 @@ header {
   }
 
   /* start header */
+
+  .home_logo_wrapper img{
+    width: 50vw;
+  }
 
   .home_logo_wrapper .japaneseName{
     height: auto;
@@ -201,7 +266,9 @@ header {
   }
 
   .sns_wrapper {
+    flex-direction: column; 
     margin:0 auto;
+    margin-bottom: 20px;
   }
 
   /* end header */
@@ -243,7 +310,8 @@ header {
   }
 
   .sns_wrapper a{
-    margin:10px 14px;
+    text-align:left;
+    width:100%;
   }
 
 }
@@ -263,19 +331,16 @@ header {
 
   .sns_wrapper {
     margin:0 auto;
-    flex-direction: column; 
+    margin-bottom: 20px;
   }
   .sns_wrapper a{
-    margin:6px auto;
+    width:100%;
+    text-align:left;
   }
 
   .sns_wrapper i{
-    font-size:22px;
-    padding:8px;
   }
   .fa-instagram {
-    width:38px;
-    text-align:center;
   }
 
 }
