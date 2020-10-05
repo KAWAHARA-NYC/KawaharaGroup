@@ -1,19 +1,18 @@
-/*Lightbox */
-.lb-cancel {
-  background: url(../js/plugin/lightbox/images/loading.gif) no-repeat;
+/*
+#spotlight .arrow-left{
+  button arrow left
+  background-color: transparent;
 }
-.lb-nav a.lb-prev { 
-  width: 50%;
-  background: url(../js/plugin/lightbox/images/prev.png) left 48% no-repeat;
+#spotlight .arrow-right{
+  button arrow right
+  background-color: transparent;
 }
-.lb-nav a.lb-next { 
-  width: 50%;
-  background: url(../js/plugin/lightbox/images/next.png) right 48% no-repeat;
+*/
+#spotlight .arrow {
+  width: 60px;
+  height: 60px;
+  background-size: 50px;
 }
-.lb-data .lb-close {
-  background: url(../js/plugin/lightbox/images/close.png) top right no-repeat;
-}
-/*Lightbox */
 
 .contents_group {
   margin-bottom:40px;
@@ -93,14 +92,10 @@ h4 {
 
 @media screen and (max-width:768px) {
 
-  .slide-arrow{
-    font-size: 30px;
-  }
-  .prev-arrow {
-    left: 8px;
-  }
-  .next-arrow {
-    right: 8px;
+  #spotlight .arrow {
+    width: 50px;
+    height: 50px;
+    background-size: 30px;
   }
 
   .img_contents{
@@ -115,21 +110,6 @@ h4 {
 
 @media (orientation: landscape) and (max-width: 820px){
 
-  .thumb-item {
-    max-width: 100vh;
-  }
-  .thumb-item-nav {
-    max-width: 100vh;
-  }
 
-  .slide-arrow{
-    font-size: 30px;
-  }
-  .prev-arrow {
-    left: 8px;
-  }
-  .next-arrow {
-    right: 8px;
-  }
 
 }
