@@ -50,7 +50,7 @@ header {
 .global_navi_wrapper {
   opacity: 1;
   visibility: visible;
-  background-color: rgba(255, 255, 255, 0.9); 
+  background-color: rgba(255, 255, 255, 1); 
   transition: opacity .5s, visibility .5s, padding-top .5s,line-height .5s, background-color 1s;
 }
 
@@ -63,7 +63,8 @@ header {
   width: 100%;
   margin: auto;
   padding: 0px;
-  border-bottom: 1px solid #1d1d1d;
+  border-bottom: 1px solid #666666;
+  box-shadow: 0 3px 3px rgba(66,66,66, 0.4) ;
 }
 
 .global_navi ul{
