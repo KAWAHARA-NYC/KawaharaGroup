@@ -18,7 +18,7 @@
   margin-bottom:40px;
 }
 
-.img_contents{
+.img_contents {
 	display: flex;
   flex-wrap:wrap;
   justify-content: center;
@@ -68,22 +68,11 @@ h4 {
 }
 
 @media screen and (max-width: 1020px) {
-  .slide-arrow{
-    font-size: 40px;
-  }
-  .prev-arrow {
-    left: -20px;
-  }
-  .next-arrow {
-    right: -20px;
-  }
+
   .all_image_wrapper {
     margin:0 4%;
   }
-  .img_contents{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
+  .img_contents {
     margin-left: 100px;
     margin-right: 100px;
   }
@@ -98,7 +87,7 @@ h4 {
     background-size: 30px;
   }
 
-  .img_contents{
+  .img_contents {
     margin-left: 10px;
     margin-right: 10px;
   }
