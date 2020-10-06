@@ -231,10 +231,11 @@ p {
   visibility: hidden;
   display: block;
   position: fixed;
+  text-align:center;
   width: 1.75rem;
   height: 1.75rem;
   z-index: 100;
-  top:15px;
+  top:20px;
   right:15px;
 }
 .nav_toggle i {
@@ -246,7 +247,7 @@ p {
 }
 
 .nav_toggle i {
-  font-size: 34px;
+  font-size: 36px;
 }
 
 .nav_toggle .fa-bars {
@@ -316,6 +317,7 @@ p {
     padding-top: 60px;
     padding-bottom: 100px;
     border-bottom: none;
+    box-shadow: unset;
   }
 
   .global_navi ul{
@@ -413,6 +415,15 @@ p {
     font-size:14px;
   }
 
+  .nav_toggle {
+    top: 15px;
+    right: 15px;
+  }
+
+  .nav_toggle i {
+    font-size: 30px;
+  }
+
   /* end header */
 
   .wrapper_title{
@@ -447,6 +458,7 @@ p {
   .global_navi {
     width: 100%;
     padding-bottom: 20px;
+    box-shadow: unset;
   }
 
   .global_navi ul{

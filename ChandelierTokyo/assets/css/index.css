@@ -99,6 +99,7 @@ header {
   padding-top: 60px;
   padding-bottom: 100px;
   border-bottom: none;
+  box-shadow: unset;
 }
 .global_navi ul {
   flex-direction: column;
@@ -140,8 +141,10 @@ header {
 }
 
 .sns_wrapper a{
-  width:100%;
-  text-align:left;
+  margin: 0 auto;
+  text-align: left;
+  display: block;
+  width: 120px;
 }
 
 .sns_wrapper i{
@@ -309,11 +312,6 @@ header {
     padding: 10px 10px;
   }
 
-  .sns_wrapper a{
-    text-align:left;
-    width:100%;
-  }
-
 }
 
 @media screen and (max-width: 480px) { 
@@ -333,14 +331,6 @@ header {
     margin:0 auto;
     margin-bottom: 20px;
   }
-  .sns_wrapper a{
-    width:100%;
-    text-align:left;
-  }
 
-  .sns_wrapper i{
-  }
-  .fa-instagram {
-  }
 
 }
