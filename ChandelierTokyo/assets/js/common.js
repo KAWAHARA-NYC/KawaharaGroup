@@ -24,3 +24,4 @@ $('.nav_toggle').on('click', function () {
     $('.nav_toggle, .global_navi_wrapper').toggleClass('show');
     $('.global_navi_wrapper').toggleClass('is-hidden');
 });
+

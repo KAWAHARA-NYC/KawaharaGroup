@@ -24,7 +24,7 @@ body {
   object-fit:cover;
   object-position:50% 100%;
 }
-.test_img {
+.top_img {
   width: 100vw;
   height: 100vh;
   object-fit:cover;
@@ -49,8 +49,10 @@ header {
   z-index: 90;
   position: absolute;
   width: auto;
+  /*
   background-image: url("../img/top/logoBackBular.png");
   background-size:100% 100%;
+  */
   margin-top:37vh;
   top: 50%;
   left:50%;
@@ -66,13 +68,9 @@ header {
   text-align: center;
   width: 100%;
   margin : 0 auto;
+  padding-top:10%;
 }
 
-.home_logo_wrapper .japaneseName{
-  height: auto;
-  width: 2.25vw;
-  margin : 0 auto;
-}
 .home_logo_wrapper img{
   text-align:center;
   border: none;
@@ -80,10 +78,6 @@ header {
   height: auto;
 }
 
-.home_logo_wrapper .englishName {
-  margin-top: 1%;
-  font-size: 2.25vw;
-}
 
 .global_navi_wrapper {
   z-index: 99;
@@ -123,7 +117,7 @@ header {
 
 .global_navi ul li a {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   align-items: center;
   justify-content: left;
@@ -223,17 +217,15 @@ header {
 }
 
 .sentence_wrapper {
+  width: 80vw;
   position: absolute;
-  width:100%;
   color: white;
   bottom: 50px;
   left: 50%;
   transform: translate(-50%, 0%);
   -webkit-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
-  justify-content: center;
   text-align: center;
-  margin: 0 auto;
 }
 
 .sentence_wrapper p {
@@ -254,18 +246,6 @@ header {
 
   .home_logo_wrapper img{
     width: 50vw;
-  }
-
-  .home_logo_wrapper .japaneseName{
-    height: auto;
-    font-size: 26px;
-    width:300px;
-  }
-
-  .home_logo_wrapper .englishName{
-    height: auto;
-    font-size: 22px;
-    width:300px;
   }
 
   .sns_wrapper {
@@ -310,6 +290,21 @@ header {
   .global_navi ul li a{
     font-size: 16px;
     padding: 10px 10px;
+  }
+
+  .home_logo_wrapper img{
+    width: 30vw;
+  }
+
+  .sentence_wrapper {
+    width: 90vw;
+    bottom: 10px;
+    left: 50%;
+
+  }
+  .sentence_wrapper p {
+    line-height: 1.4em;
+    font-size: 12px;
   }
 
 }

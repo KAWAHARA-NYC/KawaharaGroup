@@ -5,10 +5,7 @@
   
 h4 {
   width:100%;
-  font-size: 26px;
-  font-weight: 700;
   margin-bottom: 30px;
-  text-align: center;
   border-bottom: 1px solid #979a9c;
 }
 
@@ -22,7 +19,7 @@ h4 {
   padding-top:6px;
   padding-left:4px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .p_formArea {
@@ -40,12 +37,12 @@ h4 {
 
 .contact_form_group {
   margin:0 auto;
-  margin-bottom:30px;
+  margin-bottom:20px;
 }
 
 .contact_form_group label {
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   padding-bottom:10px;
 }
@@ -71,7 +68,7 @@ textarea {
   display: block;
   margin: 5px 0;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .radio_group input {
@@ -92,10 +89,6 @@ textarea {
 
 
 .intro_wrapper {
-  width:570px;
-  margin: 0 auto;
-  text-align:left;
-  font-size: 15px;
   margin-bottom: 5%;
 }
 
