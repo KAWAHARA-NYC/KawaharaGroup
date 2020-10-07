@@ -142,23 +142,19 @@ header {
 }
 
 .sns_wrapper i{
-  font-size:16px;
   color: #8f8f8f;
   border-radius: 10px;
   text-align:left;
 }
 .fa-instagram {
-  width:30px;
   text-align:center;
   font-weight: 800;
 }
 
 .fa-twitter {
-  width:30px;
 }
 
 .fa-facebook-f {
-  width:30px;
 }
 .snstext{
   color:black;
