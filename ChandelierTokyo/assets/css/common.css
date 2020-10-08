@@ -134,7 +134,7 @@ footer {
   font-size: 12px;
   text-align: left;
   padding: 30px 0 15px;
-  background-color: #adadad;
+  background-color: rgba(193, 174, 141, 0.8);
   color: white;
   position:absolute;
   bottom:0;
@@ -146,13 +146,13 @@ footer {
 .foot_content{
   padding: 0 20px;
   padding-bottom: 20px;
-  width: 200px;
+  width: 144px;
 
 }
 .foot_sns_wrapper {
   padding: 0 20px;
   padding-bottom: 20px;
-  width: 200px;
+  width: auto;
 
 }
 .foot_wrapper .sns_wrapper {
@@ -168,21 +168,23 @@ footer {
   color: #585858;
 }
 .foot li {
-    padding: 8px;
+  padding: 8px;
 }
 .foot a {
-    color: white;
+  color: white;
 }
 .foot a:hover {
-    color: white
+  color: white
 }
 .foot a:active {
-    color: white;
+  color: white;
 }
-footer p {
+.foot_copyright {
+  border-top: solid 1px white;
+  margin: 0 40px;
+  padding-top: 4px;
   font-size: 12px;
   text-align: center;
-  padding-right: 10px;
 }
 
 /* end footer */
@@ -389,15 +391,14 @@ h4 {
     display:block;
     width: 120px;
   }
-  
-  .foot_content{
-    padding: 0 12px;
+
+  .foot_wrapper .sns_wrapper a {
+    margin: 0 0;
     width: auto;
   }
-  .foot_sns_wrapper {
-    padding: 0 12px;
-    padding-bottom: 20px;
-    width: auto;
+  
+  .foot_content{
+    width: 144px;
   }
 
   .snstext{
