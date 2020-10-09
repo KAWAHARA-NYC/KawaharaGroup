@@ -8,7 +8,7 @@ $(function () {
             //ウィンドウの高さを取得
             var windowHeight = $(window).height();
             //ターゲットまでスクロールするとフェードインする
-            if (scroll > target - windowHeight + 300) {
+            if (scroll > target - windowHeight + 200) {
                 $(this).css('opacity', '1');
                 $(this).css('transform', 'translateY(0)');
             }
