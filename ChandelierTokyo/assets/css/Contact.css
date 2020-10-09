@@ -76,14 +76,19 @@ textarea {
   margin-right:5px;
 }
 
+.contact_form__btn {
+  text-align: center;
+}
 
 .contact_form__btn input {
   text-align: center;
   border: none;
-  border-radius: 2rem;
+  border-radius: 0.6rem;
+  width:auto;
+  color: white;
 
-  background-color: #C1AE8D;;
-  padding: 1rem 1rem;
+  background-color: #36a5d8;
+  padding: 1rem 3rem;
   font-weight: bold;
 }
 
