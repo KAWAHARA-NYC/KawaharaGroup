@@ -86,10 +86,17 @@ textarea {
   border-radius: 0.6rem;
   width:auto;
   color: white;
-
   background-color: #36a5d8;
   padding: 1rem 3rem;
   font-weight: bold;
+}
+
+input::placeholder {
+  color: #b9b9b9;
+}
+
+textarea::placeholder {
+  color: #b9b9b9;
 }
 
 

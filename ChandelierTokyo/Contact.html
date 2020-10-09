@@ -64,22 +64,27 @@
 
                 <div class="contact_form_group">
                     <label>お名前<span class="required">*</span></label>
-                    <input type="text" v-model="userName">
+                    <input type="text" v-model="userName" placeholder="東京　太郎">
                     <p class="err_msg">{{ err_userName }}</p>
                 </div>
                 <div class="contact_form_group">
+                    <label>ふりがな<span class="required">*</span></label>
+                    <input type="text" v-model="hurigana" placeholder="とうきょう　たろう">
+                    <p class="err_msg">{{ err_hurigana }}</p>
+                </div>
+                <div class="contact_form_group">
                     <label>メールアドレス<span class="required">*</span></label>
-                    <input type="email" v-model="email">
+                    <input type="email" v-model="email" placeholder="info@example.com">
                     <p class="err_msg">{{ err_email }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>電話番号<span class="required">*</span></label>
-                    <input type="tel" v-model="tel">
+                    <input type="tel" v-model="tel" placeholder="090-1234-5678">
                     <p class="err_msg">{{ err_tel }}</p>
                 </div>
                 <div class="contact_form_group">
                     <label>お住まい<span class="required">*</span></label>
-                    <input type="text" v-model="address">
+                    <input type="text" v-model="address" placeholder="東京都港区三田2−17−29">
                     <p class="err_msg">{{ err_address }}</p>
                 </div>
                 <div class="contact_form_group">
@@ -107,7 +112,7 @@
                 </div>
                 <div class="contact_form_group">
                     <label>自由入力欄</label>
-                    <textarea id="content" v-model="content"></textarea>
+                    <textarea id="content" v-model="content" placeholder="ご予算・デザイン・シャンデリアに関するご相談等、ご自由に記載ください"></textarea>
                 </div>
                 <div class="contact_form__btn">
                     <input type="submit" value="送信する">

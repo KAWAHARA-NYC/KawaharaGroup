@@ -15,6 +15,7 @@ new Vue({
   el: "#postForm",
   data: {
     err_userName: "",
+    err_hurigana: "",
     err_email: "",
     err_tel: "",
     err_address: "",
@@ -22,6 +23,7 @@ new Vue({
     err_contactType: "",
     showForm: true,
     userName: "",
+    hurigana: "",
     email: "",
     tel: "",
     address: "",
@@ -33,6 +35,7 @@ new Vue({
   methods: {
     submit: function (e) {
       if (this.userName &&
+        this.hurigana &&
         this.email &&
         this.validEmail(this.email) &&
         this.tel &&
@@ -44,6 +47,7 @@ new Vue({
         const submitParams = new FormData();
         // お問い合わせ内容のname属性値
         submitParams.append("entry.1690203451", this.userName);
+        submitParams.append("entry.1270114975", this.hurigana);
         submitParams.append("entry.537968795", this.email);
         submitParams.append("entry.1208304358", this.tel);
         submitParams.append("entry.180164622", this.address);
@@ -76,6 +80,7 @@ new Vue({
         return true;
       } else {
         this.err_userName = "";
+        this.err_hurigana = "";
         this.err_email = "";
         this.err_tel = "";
         this.err_address = "";
@@ -84,6 +89,9 @@ new Vue({
 
         if (!this.userName) {
           this.err_userName = 'お名前を入力してください。';
+        }
+        if (!this.hurigana) {
+          this.err_hurigana = 'ふりがなを入力してください。';
         }
         if (!this.email) {
           this.err_email = 'メールアドレスを入力してください。';
@@ -119,8 +127,5 @@ new Vue({
       var re = /^[0-9]{3}-?[0-9]{3,4}-?[0-9]{3,4}$/;
       return re.test(tel);
     }
-    /*
-    
-    */
   }
 });
