@@ -50,12 +50,12 @@
 }
 
 .showroom_link {
-  color: #0000EE;
+  color: rgba(193, 174, 141, 1);
   text-decoration: underline;
 }
 
 .showroom_link:active {
-  color: #FF0000;
+  color: rgba(193, 174, 141, 1);
   text-decoration: underline;
 }
 

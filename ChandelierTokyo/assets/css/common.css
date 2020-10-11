@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0px;
-  background-color: rgba(255, 255, 255, 0.979);
-  color: #242424;
+  background-color:  rgba(38, 38, 38, 1);
+  color: white;
   flex-flow: column;
   min-height: 100vh;
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica",YuGothic,"Yu Gothic";
@@ -21,7 +21,7 @@ header {
 .logo_wrapper {
   height: auto;
   width: 100%;
-  background-color : white; 
+  background-color :  rgba(38, 38, 38, 1);
   border-bottom: none ;
   padding-bottom: 2px;
 }
@@ -52,7 +52,7 @@ header {
 .global_navi_wrapper {
   opacity: 1;
   visibility: visible;
-  background-color: rgba(255, 255, 255, 1); 
+  background-color:  rgba(38, 38, 38, 1); 
   transition: opacity .5s, visibility .5s, padding-top .5s,line-height .5s, background-color 1s;
 }
 
@@ -66,7 +66,7 @@ header {
   margin: auto;
   padding: 0px;
   border-bottom: 1px solid #666666;
-  box-shadow: 0 3px 3px rgba(66,66,66, 0.4) ;
+  box-shadow:0 6px 6px -5px #666666;
 }
 
 .global_navi ul{
@@ -80,13 +80,13 @@ header {
   text-align:center;
   align-items: stretch;
   width:25%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color:  rgba(38, 38, 38, 0);
   color:#7e7e7e;
 }
 
 .global_navi ul li:hover {
-  background-color: white;
-  color: #1d1d1d;
+  background-color:  rgba(38, 38, 38, 1);
+  color: rgba(193, 174, 141, 0.8);
 }
 .global_navi ul li a {
   color:#a7a7a7;
@@ -100,14 +100,14 @@ header {
   padding-bottom: 15px;
 }
 .global_navi ul li a:hover {
-  color: #1d1d1d;
+  color: white;
 }
 .global_navi ul li a:active {
-  color: #1d1d1d;
+  color: white;
 }
 
 .global_navi ul li.global_navi-item-active a{
-  color: #1d1d1d;
+  color: white;
 }
 
 .global_navi ul li.global_navi-item-active a div.radius-underline div{
@@ -118,7 +118,7 @@ header {
 }
 
 .global_navi ul li.global_navi-item-active a div.radius-underline:after {
-  background-color: #1d1d1d;
+  background-color: white;
   border-radius: 2px;
   content: "";
   display: block;
@@ -287,7 +287,7 @@ p {
   padding:8px;
   border-radius: 10px;
   width:30px;
-  color: #8f8f8f;
+  color: #cfcfcf;
   text-align: center;
 }
 
@@ -316,7 +316,7 @@ h4 {
     width:auto;
     top: 0px;
     right: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(193, 174, 141, 0.9);
   }
 
   .global_navi_wrapper.is-hidden {
@@ -351,9 +351,18 @@ h4 {
     padding: 15px 20px;
   }
 
-  .global_navi ul li.global_navi-item-active a {
-    color: white;
+  .global_navi ul li:hover {
+    background-color:  rgba(255, 255, 255, 1);
+    color: rgba(193, 174, 141, 0.8);
   }
+
+  .global_navi ul li a:hover {
+    color: rgba(193, 174, 141, 0.8);
+  }
+  .global_navi ul li a:active {
+    color: rgba(193, 174, 141, 0.8);
+  }
+  
 
   .global_navi ul li.global_navi-item-active a div.radius-underline div{
     padding-right: 0;
@@ -362,7 +371,7 @@ h4 {
   }
 
   .global_navi ul li.global_navi-item-active a:hover{
-    color: black;
+    color: rgba(193, 174, 141, 0.8);
   }
 
   .global_navi ul li.global_navi-item-active a div.radius-underline:after {
@@ -370,7 +379,7 @@ h4 {
   }
 
   .global_navi ul li.global_navi-item-active a:hover div.radius-underline:after {
-    background-color: black;
+    background-color:rgba(193, 174, 141, 1);
   }
 
   .nav_toggle {
