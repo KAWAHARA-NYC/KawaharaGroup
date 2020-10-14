@@ -58,7 +58,12 @@
         </div>
     </header>
     <div class="wrapper">
-        <p class="wrapper_title"><span>お問合せ</span></p>
+        <div class="intro_wrapper fadeInUp">
+            <div class="description">
+                <p>購入検討や、シャンデリアに関する相談などをご希望の方は下記フォームに必要事項をご記入の上、送信ボタンをクリックしてください。
+                </p>
+            </div>
+        </div>
         <div class="p_formArea" id="postForm">
             <form class="contact_form" name="Form1" v-on:submit.prevent="submit" v-if="showForm" novalidate="true">
 
@@ -112,7 +117,8 @@
                 </div>
                 <div class="contact_form_group">
                     <label>自由入力欄</label>
-                    <textarea id="content" v-model="content" placeholder="ご予算・デザイン・シャンデリアに関するご相談等、ご自由に記載ください"></textarea>
+                    <textarea id="content" v-model="content"
+                        placeholder="ご予算・デザイン・シャンデリアに関するご相談等、ご自由に記載ください"></textarea>
                 </div>
                 <div class="contact_form__btn">
                     <input type="submit" value="送信する">
