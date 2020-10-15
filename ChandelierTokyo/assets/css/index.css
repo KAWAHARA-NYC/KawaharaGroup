@@ -226,7 +226,7 @@ header {
 
 .sentence_wrapper p {
   width:100%;
-  font-family: century;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 @media screen and (max-width:768px) {
