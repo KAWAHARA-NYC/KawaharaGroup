@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0px;
   background-color: rgba(255, 255, 255, 0.979);
-  color: #242424;
+  color: #525252;
   flex-flow: column;
   min-height: 100vh;
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica",YuGothic,"Yu Gothic";
@@ -198,8 +198,8 @@ footer {
 }
 
 .wrapper_title{
-  text-align: center;
-  font-size:1.2em;
+  text-align: left;
+  font-size:1.6em;
   margin-bottom: 3%;
   width: auto;
 }
@@ -210,8 +210,8 @@ footer {
 .intro_wrapper {
   max-width:570px;
   margin: 0 auto;
-  text-align:center;
-  font-size: 14px;
+  text-align: left;
+  font-size: 16px;
   margin-bottom: 50px;
 }
 
@@ -227,7 +227,7 @@ footer {
 
 p {
   line-height: 1.8em;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .fadeInUp {
@@ -292,10 +292,10 @@ p {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -445,13 +445,13 @@ h4 {
 
   .wrapper_title{
     text-align: center;
-    font-size:1.2em;
+    font-size:1.4em;
     margin-bottom: 3%;
     width: auto;
   }
 
   h4 {
-    font-size:1.2em;
+    font-size:1.4em;
   }
 
   .intro_wrapper {
@@ -502,7 +502,7 @@ h4 {
   }
 
   .wrapper_title{
-    font-size:1.2em;
+    font-size:1.4em;
   }
 
   .intro_wrapper {
