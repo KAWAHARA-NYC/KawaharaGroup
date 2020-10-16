@@ -1,4 +1,5 @@
 h4 {
+  font-size: 1em;
   width:100%;
   max-width: 600px;
   margin-bottom: 10px;
@@ -32,12 +33,12 @@ h4 {
 }
 
 .zigyo th {
-  padding: 5px 0px;
+  padding:0px;
   width: 100%;
   display: block;
 }
 .zigyo td {
-  padding: 5px 0px;
+  padding: 0px 0px 18px;
   width: 600px;
   display: block;
 }
@@ -49,14 +50,14 @@ h4 {
 }
 
 .station th {
-  padding: 4px 8px;
+  padding: 4px 16px 4px 0;
   vertical-align: top;
   text-align: left;
   font-weight: normal;
 }
 
 .station td {
-  padding: 4px 8px;
+  padding: 4px 16px 4px 0;
   vertical-align: top;
   text-align: left;
 }
@@ -112,6 +113,11 @@ h4 {
   display:block;
 }
 
+.br::before {
+	content: "\A" ;
+	white-space: pre ;
+}
+
 
 @media screen and (max-width:768px) {
 
@@ -139,7 +145,7 @@ h4 {
   }
 
   .outline th {
-    padding: 5px 0px;
+    padding:0px;
     width:100%;
     word-break : break-all;
     display:block;
@@ -149,7 +155,7 @@ h4 {
     width:300px;
     word-wrap: break-word;
     display:block;
-    padding: 5px 0px;
+    padding: 0px 0px 18px;
   }
 
   .access {
@@ -175,6 +181,11 @@ h4 {
     max-width: 300px;
     text-align: left;
   }
+
+  .br::before {
+    content: "" ;
+    white-space: pre ;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 820px){
@@ -194,7 +205,6 @@ h4 {
   }
 
   .outline th {
-    padding: 10px 0px;
     width:100%;
     word-break : break-all;
     display:block;
@@ -204,7 +214,6 @@ h4 {
     width:300px;
     word-wrap: break-word;
     display:block;
-    padding: 10px 0px;
   }
 
   .map_wrapper {
@@ -212,9 +221,6 @@ h4 {
     height: 80%;
     padding: calc(450 / 650 * 100%) 0 0;
     margin-bottom: 20px;
-  }
-  .access_wrapper p {
-    margin: 0 8%;
   }
   .station {
     font-size: 16px;
@@ -242,7 +248,7 @@ h4 {
   }
 
   h4 {
-    font-size: 1em;
+    font-size: 12px;
     max-width: 300px;
     text-align: left;
   }
