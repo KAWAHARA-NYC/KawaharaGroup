@@ -25,3 +25,10 @@ $('.nav_toggle').on('click', function () {
     $('.global_navi_wrapper').toggleClass('is-hidden');
 });
 
+
+var path = location.pathname ;
+var protocol = location.protocol ;
+var changepath = path.replace('.html','')
+if (protocol != 'file:'){
+history.replaceState(null, null, changepath);
+}
