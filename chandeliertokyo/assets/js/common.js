@@ -28,11 +28,7 @@ $('.nav_toggle').on('click', function () {
 
 var path = location.pathname ;
 var protocol = location.protocol ;
-var changepath = path.replace('.html','');
-console.log(changepath);
-if (protocol != 'file:') {   
-    if (changepath == '/chandeliertokyo/index') {
-        changepath = changepath.replace('index','')
-    }
+var changepath = path.replace('index.html','')
+if (protocol != 'file:'){
     history.replaceState(null, null, changepath);
 }
