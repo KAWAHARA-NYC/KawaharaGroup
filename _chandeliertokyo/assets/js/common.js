@@ -28,7 +28,7 @@ $('.nav_toggle').on('click', function () {
 
 var path = location.pathname ;
 var protocol = location.protocol ;
-var changepath = path.replace('index.html','')
-if (protocol != 'file:'){
+var changepath = path.replace('index.html','') ;
+if (protocol != 'file:') {
     history.replaceState(null, null, changepath);
-}
+};
