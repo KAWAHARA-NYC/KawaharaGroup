@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="【公式】シャンデリア東京 -  シャンデリア専門店">
+    <meta name="description" content="シャンデリアの専門店です。シャンデリアのデザイン・制作・取り付けを承っています。また、シャンデリアの清掃や修理等、シャンデリアのことならご気軽にご相談ください。">
+    <meta name="keywords" content="the most expensive chandelier,the origial chadelier,シャンデリア,オーダーメイド,オリジナル">
+    <meta name="og:title" content="【公式】シャンデリア東京 -  シャンデリア専門店">
+    <meta name="og:url" content="http://kawahara-group.com/ChandelierTokyo">
+    <meta name="og:title" content="">
+    <meta name="og:description" content="シャンデリアの専門店です。シャンデリアのデザイン・制作・取り付けを承っています。また、シャンデリアの清掃や修理等、シャンデリアのことならご気軽にご相談ください。">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/destyle.css" style="visibility: visible;">
+    <link rel="shortcut icon" href="../assets/icon-6.png" />
+    <link rel="icon" href="../assets/icon-6.png" />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T76FSV7');</script>
+    <!-- End Google Tag Manager -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f4ca47b6e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css" style="visibility: visible;">
+    <link rel="stylesheet" type="text/css" href="../assets/css/contact.css" style="visibility: visible;">
+    <title>【公式】シャンデリア東京 -  シャンデリア専門店</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T76FSV7" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <div class="logo_wrapper">
+            <div class="logo">
+                <a href="../index.html"><img src="../assets/logo.png"></a>
+            </div>
+        </div>
+        <span class="nav_toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+        </span>
+        <div class="global_navi_wrapper is-hidden">
+            <div class="global_navi">
+                <ul class="menu">
+                    <li><a href="../abouthistory/index.html">シャンデリア東京<br>About Us</a></li>
+                    <li><a href="../aboutchandelier/index.html">写真ギャラリー<br>Photo</a></li>
+                    <li><a href="../company/index.html">事業内容<br>Company</a></li>
+                    <li class="global_navi-item-active"><a href="index.html">
+                            <div class="radius-underline">
+                                <div>お問い合わせ<br>Contact</div>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="copyright_wrapper">
+                <div class="sns_wrapper">
+                    <a href="https://www.instagram.com/chandelier_tokyo/?hl=ja"><i class="fab fa-instagram"></i><span
+                            class="snstext">instagram</span></a>
+                    <a href="https://twitter.com/chandelier_tyo"><i class="fab fa-twitter"></i><span
+                            class="snstext">twitter</span></a>
+                    <a href="https://www.facebook.com/シャンデリア東京offical-110179560857153/?modal=admin_todo_tour"><i
+                            class="fab fa-facebook-f"></i></i><span class="snstext">facebook</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="intro_wrapper fadeInUp">
+            <div class="description">
+                <p>購入検討や、シャンデリアに関する相談などをご希望の方は下記フォームに必要事項をご記入の上、送信ボタンをクリックしてください。
+                </p>
+            </div>
+        </div>
+        <div class="p_formArea" id="postForm">
+            <form class="contact_form" name="Form1" v-on:submit.prevent="submit" v-if="showForm" novalidate="true">
+
+                <div class="contact_form_group">
+                    <label>お名前<span class="required">*</span></label>
+                    <input type="text" v-model="userName" placeholder="東京　シャンデリア">
+                    <p class="err_msg">{{ err_userName }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>ふりがな<span class="required">*</span></label>
+                    <input type="text" v-model="hurigana" placeholder="とうきょう　しゃんでりあ">
+                    <p class="err_msg">{{ err_hurigana }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>メールアドレス<span class="required">*</span></label>
+                    <input type="email" v-model="email" placeholder="info@example.com">
+                    <p class="err_msg">{{ err_email }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>電話番号<span class="required">*</span></label>
+                    <input type="tel" v-model="tel" placeholder="090-1234-5678">
+                    <p class="err_msg">{{ err_tel }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>お住まい<span class="required">*</span></label>
+                    <input type="text" v-model="address" placeholder="東京都港区三田2−17−29">
+                    <p class="err_msg">{{ err_address }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>個人/法人<span class="required">*</span></label>
+                    <div class="radio_group">
+                        <label><input type="radio" value="個人" v-model="userType">個人</label>
+                        <label><input type="radio" value="法人" v-model="userType">法人</label>
+                    </div>
+                    <p class="err_msg">{{ err_userType }}</p>
+                </div>
+                <div class="contact_form_group">
+                    <label>お問合せ内容<span class="required">*</span></label>
+                    <div class="radio_group">
+                        <label><input type="radio" value="購入検討" v-model="contactType" onClick="changeDisabled()"
+                                name="contactType">購入検討</label>
+                        <label><input type="radio" value="話を聞きたい" v-model="contactType" onClick="changeDisabled()"
+                                name="contactType">話を聞きたい</label>
+                        <label><input type="radio" value="見積もりをしたい" v-model="contactType" onClick="changeDisabled()"
+                                name="contactType">見積もりをしたい</label>
+                        <label class="toiawaseetc"><input type="radio" value="__other_option__" v-model="contactType"
+                                onClick="changeDisabled()" name="contactType">その他
+                    </div>
+                    <p class="err_msg">{{ err_contactType }}</p>
+                    <input type="text" class="toiawasenaiyo" v-model="contactTypeEtc" name="contactTypeEtc"></label>
+                </div>
+                <div class="contact_form_group">
+                    <label>自由入力欄</label>
+                    <textarea id="content" v-model="content"
+                        placeholder="ご予算・デザイン・シャンデリアに関するご相談等、ご自由に記載ください"></textarea>
+                </div>
+                <div class="contact_form__btn">
+                    <input type="submit" value="送信する">
+                </div>
+            </form>
+            <div class="p_formSucess" v-else>
+                <div class="intro_wrapper">
+                    <div class="description">
+                        <p>お問合せありがとうございました。<BR>
+                            入力されたアドレスに確認メールが自動配信されますので、<BR>
+                            ご確認ください。
+                        </p>
+                        <BR>
+                        <div><a href="../index.html">ホーム画面を表示</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot_wrapper">
+                <div class="foot_content">
+                    <ul class="foot">
+                        <li><a href="index.html">お問い合わせ</a></li>
+                        <li><a href="../company/index.html">企業概要</a></li>
+                        <li><a href="../company/index.html#access">アクセス</a></li>
+                    </ul>
+                </div>
+                <div class="foot_sns_wrapper">
+                    <div class="sns_wrapper">
+                        <a href="https://www.instagram.com/chandelier_tokyo/?hl=ja"><i
+                                class="fab fa-instagram"></i><span class="snstext">instagram</span></a>
+                        <a href="https://twitter.com/chandelier_tyo"><i class="fab fa-twitter"></i><span
+                                class="snstext">twitter</span></a>
+                        <a href="https://www.facebook.com/シャンデリア東京offical-110179560857153/?modal=admin_todo_tour"><i
+                                class="fab fa-facebook-f"></i></i><span class="snstext">facebook</span></a>
+                    </div>
+                </div>
+            </div>
+            <p class="foot_copyright">&copy;copy right Chandelier TOKYO</p>
+        </footer>
+    </div>
+
+    <script src="../assets/js/contact.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>
