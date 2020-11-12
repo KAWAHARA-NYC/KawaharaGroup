@@ -40,6 +40,12 @@ h4 {
   margin-bottom: 15px;
   text-align: left;
 }
+h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: bold;
+}
 .img_description p {
   text-align: left;
   color: #A5A5A5;
@@ -50,6 +56,10 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 26px;
+    text-align: left;
+  }
   h4 {
     font-size: 26px;
     text-align: left;
@@ -57,6 +67,11 @@ p {
 }
 
 @media screen and (max-width:768px) {
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-left: 0%;
+  }
   h4 {
     text-align: center;
     font-size: 24px;
@@ -91,6 +106,10 @@ p {
 
 @media (orientation: landscape) and (max-width: 820px){
 
+  h1 {
+    text-align: center;
+    font-size: 1.4em;
+  }
   h4 {
     text-align: center;
     font-size: 1.4em;
@@ -121,6 +140,9 @@ p {
 
 
 @media screen and (max-width: 480px) { 
+  h1 {
+    font-size: 1.2em;
+  }
   h4 {
     font-size: 1.2em;
   }
