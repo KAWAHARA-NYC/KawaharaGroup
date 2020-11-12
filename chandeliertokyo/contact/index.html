@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="【公式】シャンデリア東京 -  シャンデリア専門店">
-    <meta name="title" content="【公式】シャンデリア東京 -  シャンデリア専門店">
-    <meta name="description" content="シャンデリアの専門店です。シャンデリアのデザイン・制作・取り付けを承っています。また、シャンデリアの清掃や修理等、シャンデリアのことならご気軽にご相談ください。">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="title" content="【公式】シャンデリア東京|問合せ">
+    <meta name="description" content="シャンデリアのご注文や取り付け・清掃など、シャンデリアのことならシャンデリア東京にご相談ください。">
     <meta name="keywords" content="the most expensive chandelier,the origial chadelier,シャンデリア,オーダーメイド,オリジナル">
-    <meta property="og:url" content="http://kawahara-group.com/ChandelierTokyo">
-    <meta property="og:image" content="https://kawahara-group.com/chandeliertokyo/assets/img/top/top-page.png">
-    <meta property="og:description" content="シャンデリアの専門店です。シャンデリアのデザイン・制作・取り付けを承っています。また、シャンデリアの清掃や修理等、シャンデリアのことならご気軽にご相談ください。">
+    <meta property="og:title" content="【公式】シャンデリア東京|問合せ">
+    <meta property="og:url" content="http://kawahara-group.com/chandeliertokyo/contact">
+    <meta property="og:image" content="https://kawahara-group.com/chandeliertokyo/assets/img/top/top-page.jpg">
+    <meta property="og:description" content="シャンデリアのご注文や取り付け・清掃など、シャンデリアのことならシャンデリア東京にご相談ください。">
     <link rel="stylesheet" type="text/css" href="../assets/css/destyle.css" style="visibility: visible;">
     <link rel="shortcut icon" href="../assets/icon-6.png" />
     <link rel="icon" href="../assets/icon-6.png" />
@@ -35,7 +36,7 @@
         type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="../assets/css/common.css" style="visibility: visible;">
     <link rel="stylesheet" type="text/css" href="../assets/css/contact.css" style="visibility: visible;">
-    <title>【公式】シャンデリア東京 -  シャンデリア専門店</title>
+    <title>【公式】シャンデリア東京|問合せ</title>
 </head>
 
 <body>
@@ -79,13 +80,13 @@
         </div>
     </header>
     <div class="wrapper">
-        <div class="intro_wrapper fadeInUp">
-            <div class="description">
-                <p>購入検討や、シャンデリアに関する相談などをご希望の方は下記フォームに必要事項をご記入の上、送信ボタンをクリックしてください。
-                </p>
-            </div>
-        </div>
         <div class="p_formArea" id="postForm">
+            <div class="intro_wrapper fadeInUp" v-if="showForm">
+                <div class="description">
+                    <p>購入検討や、シャンデリアに関する相談などをご希望の方は下記フォームに必要事項をご記入の上、送信ボタンをクリックしてください。
+                    </p>
+                </div>
+            </div>
             <form class="contact_form" name="Form1" v-on:submit.prevent="submit" v-if="showForm" novalidate="true">
 
                 <div class="contact_form_group">
@@ -152,6 +153,7 @@
                             入力されたアドレスに確認メールが自動配信されますので、<BR>
                             ご確認ください。
                         </p>
+                        <BR>
                         <BR>
                         <div><a href="../index.html">ホーム画面を表示</a></div>
                     </div>
